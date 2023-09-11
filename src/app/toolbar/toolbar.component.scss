@@ -1,0 +1,171 @@
+.nav {
+    grid-column: container-start/container-end;
+    width: 100%;
+    height: 16rem;
+    position: fixed;
+    text-transform: uppercase;
+   
+    display: grid;
+    grid-template-rows: 2 1fr;
+    background-color: whitesmoke;
+    overflow: hidden;
+
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+
+   #menu{
+        visibility: hidden;
+        color:black
+    }
+
+    &_logo {
+        justify-self: center;
+        padding: 1rem;
+
+        span {
+            padding: 1rem;
+            color: black;
+            font-size: calc(1rem + 1vw)
+        }
+
+        p {
+            color: black;
+            font-size: calc(1rem + 1vw)
+        }
+    }
+
+    &_links {
+        display: flex;
+        justify-content: space-evenly;
+
+
+
+
+        a {
+            font-size: calc(0.5rem + 0.5vw ), ;
+            background: none;
+            color: black;
+            display: block;
+
+
+            padding: 0.8rem;
+            place-self: start;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+
+
+
+
+
+            span {
+                display: block;
+                position: absolute;
+
+
+            }
+
+            span:first-child {
+
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 0.6rem;
+                background: linear-gradient(90deg, transparent, #ffd6c7);
+                transition: 0.5s;
+                transition-delay: 1s;
+            }
+
+            span:nth-child(2) {
+                top: -100%;
+                right: 0;
+                width: 0.6rem;
+                height: 100%;
+                background: linear-gradient(180deg, transparent, #bcdae2);
+                transition: 0.5s;
+                transition-delay: 0.75;
+            }
+
+            span:nth-child(3) {
+                bottom: 0;
+                right: -100%;
+                width: 100%;
+                height: 0.6rem;
+                background: linear-gradient(270deg, transparent, #ffd6c7);
+                transition: 0.7s;
+                transition-delay: 0.25s;
+            }
+
+            span:nth-child(4) {
+                top: 100%;
+                left: 0%;
+                width: 0.6rem;
+                height: 100%;
+                background: linear-gradient(3600deg, transparent, #bcdae2);
+                transition: 0.5s;
+                transition-delay: 0;
+            }
+
+        }
+
+
+
+
+        a:hover {
+            border-width: 0.6rem;
+            border-style: solid;
+            border-image: linear-gradient(to right, #ffd6c7, #bcdae2)1;
+            transition-delay: 1s;
+        }
+
+
+
+        a:hover span:first-child,
+        &--link:active span:first-child {
+            left: 100%;
+            transition-duration: 1s;
+            transition-delay: 0s;
+        }
+
+        a:hover span:nth-child(2),
+        &--link:active span:nth-child(2) {
+            top: 100%;
+            transition-duration: 1s;
+            transition-delay: 0.25s;
+        }
+
+        a:hover span:nth-child(3),
+        &--link:active span:nth-child(3) {
+            right: 100%;
+            transition-duration: 1s;
+            transition-delay: 0.5s;
+        }
+
+        a:hover span:nth-child(4),
+        &--link:active span:nth-child(4) {
+            top: -100%;
+            transition-duration: 1s;
+            transition-delay: 0.75s;
+        }
+
+    }
+
+
+}
+
+@media screen and (max-width: 400px) {
+    .nav {
+        height: 6rem;
+
+        p{
+            font-size: 2rem;
+        }
+        span{
+          font-size:  2rem
+        }
+    }
+    #menu{
+        visibility:visible;
+    }
+
+
+}

@@ -1,0 +1,22 @@
+.home {
+  display: grid;
+  grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
+  grid-template-rows: min-content 90vh repeat(9, min-content);
+}
+.home .toolbar {
+  grid-template-columns: container-start/conteinar-end;
+  height: 16rem;
+}
+.home app-showcase {
+  grid-column: container-start/container-end;
+  width: 100%;
+  height: 90vh;
+  background-color: aqua;
+  background-image: linear-gradient(rgba(255, 239, 233, 0.5098039216), rgba(255, 239, 233, 0.5098039216)), url("/assets/pexels-amina-filkins-5414032.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.home app-showcase-text {
+  grid-column: center-end/container-end;
+  background-color: #ffefe9;
+}/*# sourceMappingURL=home.component.css.map */
