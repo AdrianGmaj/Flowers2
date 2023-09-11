@@ -1,3 +1,33 @@
-.showcase_picture{
+.showcase_picture {
    
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 6vh 4vw;
+        &-title {
+            font-size: calc(2rem + 3vw), ;
+            font-weight: 300;
+
+
+
+            span {
+                font-size: calc(2rem + 3vw);
+                color: blue;
+                ;
+            }
+
+        }
+
+        &-para {
+            font-size: calc(1rem + 2vw);
+            color: var(--color-quinary);
+            font-family: "Balsamiq Sans";
+            letter-spacing: 0.2rem;
+        }
+
+
+
+    }
 }

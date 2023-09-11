@@ -1,0 +1,118 @@
+.offer {
+  display: grid;
+  grid-template-rows: 2 1fr;
+  row-gap: 3vh;
+}
+.offer_title {
+  font-size: calc(1.5rem + 4vw);
+  text-align: center;
+  margin-top: 2rem;
+  padding: 4rem;
+}
+.offer_content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 6vh;
+  place-items: center;
+}
+.offer_content-card {
+  width: 40rem;
+  height: 40rem;
+  position: relative;
+}
+.offer_content-card-front, .offer_content-card-back {
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+  backface-visibility: hidden;
+  transform: perspective(100rem);
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  padding: 3rem;
+}
+.offer_content-card-back p {
+  place-self: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.offer_content-card-back h4 {
+  place-self: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.offer_content-card:first-child .offer_content-card-front {
+  background: url("/assets/roses.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.offer_content-card:nth-child(2) .offer_content-card-front {
+  background: url("/assets/dahlia1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.offer_content-card:nth-child(3) .offer_content-card-front {
+  background: url("/assets/orchid1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.offer_content-card:nth-child(4) .offer_content-card-front {
+  background: url("/assets/peony1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.offer_content-card:nth-child(5) .offer_content-card-front {
+  background: url("/assets/pink-roses.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.offer_content-card:nth-child(6) .offer_content-card-front {
+  background: url("/assets/sunflower1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.offer_content-card-back {
+  transform: perspective(100rem) rotateY(0.5turn);
+}
+
+.offer_content-card:hover .offer_content-card-front {
+  transform: perspective(100rem) rotateY(0.5turn);
+}
+
+.offer_content-card:first-child:hover .offer_content-card-back {
+  transform: perspective(100rem) rotateY(1turn);
+  background-color: #c21e56;
+}
+
+.offer_content-card:nth-child(2):hover .offer_content-card-back {
+  transform: perspective(100rem) rotateY(1turn);
+  background-color: #dbc8ab;
+}
+
+.offer_content-card:nth-child(3):hover .offer_content-card-back {
+  transform: perspective(100rem) rotateY(1turn);
+  background-color: #f1ebd9;
+}
+
+.offer_content-card:nth-child(6):hover .offer_content-card-back {
+  transform: perspective(100rem) rotateY(1turn);
+  background-color: #ffda03;
+}
+
+.offer_content-card:nth-child(5):hover .offer_content-card-back {
+  transform: perspective(100rem) rotateY(1turn);
+  background-color: #f3c9d5;
+}
+
+.offer_content-card:nth-child(4):hover .offer_content-card-back {
+  transform: perspective(100rem) rotateY(1turn);
+  background-color: #f3c9d5;
+}/*# sourceMappingURL=offer.component.css.map */

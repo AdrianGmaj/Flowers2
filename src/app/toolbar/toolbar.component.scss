@@ -4,17 +4,17 @@
     height: 16rem;
     position: fixed;
     text-transform: uppercase;
-   
+
     display: grid;
     grid-template-rows: 2 1fr;
     background-color: whitesmoke;
     overflow: hidden;
-
+    z-index: 100;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 
-   #menu{
+    #menu {
         visibility: hidden;
-        color:black
+        color: black
     }
 
     &_logo {
@@ -41,7 +41,7 @@
 
 
         a {
-            font-size: calc(0.5rem + 0.5vw ), ;
+            font-size: calc(0.5rem + 0.5vw), ;
             background: none;
             color: black;
             display: block;
@@ -156,15 +156,17 @@
     .nav {
         height: 6rem;
 
-        p{
+        p {
             font-size: 2rem;
         }
-        span{
-          font-size:  2rem
+
+        span {
+            font-size: 2rem
         }
     }
-    #menu{
-        visibility:visible;
+
+    #menu {
+        visibility: visible;
     }
 
 

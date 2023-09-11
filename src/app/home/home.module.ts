@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ShowcaseComponent } from './home/showcase/showcase.component';
-import { ShowcaseTextComponent } from './home/showcase-text/showcase-text.component';
+import { OfferComponent } from './home/offer/offer.component';
+
 
 
 
@@ -12,7 +13,8 @@ import { ShowcaseTextComponent } from './home/showcase-text/showcase-text.compon
   declarations: [
     HomeComponent,
     ShowcaseComponent,
-    ShowcaseTextComponent
+    OfferComponent
+   
   
   ],
   imports: [

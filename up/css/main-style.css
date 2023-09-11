@@ -1,3 +1,11 @@
+::-moz-selection {
+  background-color: var(--color-primary);
+}
+
+::selection {
+  background-color: var(--color-primary);
+}
+
 *,
 *::before,
 *::after {
@@ -7,7 +15,7 @@
 }
 
 html {
-  --color-primary: hsl(87, 98%, 34%);
+  --color-primary: smokedwite;
   --color-primary-m: hsla(87, 100%, 45%, 0.55);
   --color-secondary: hsl(274, 99%, 72%);
   --color-secondary-m: hsl(274, 99%, 72%, 0.6);
@@ -39,7 +47,7 @@ html[data-theme=dark] {
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.9;
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 
 .container {
@@ -64,4 +72,38 @@ a:visited {
 i {
   color: var(--color-primary);
   font-size: calc(1.5rem + 2vw);
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.scroll {
+  position: fixed;
+  bottom: 70rem;
+  right: 4rem;
+  height: 4rem;
+  width: 4rem;
+  background-image: url("../img/scroll/scroll.svg");
+  background-repeat: no-repeat;
+  background-color: var(--color-secondary-m);
+  background-size: contain;
+  background-position: center;
+  padding: 1rem;
+  border-radius: 50%;
+  z-index: 30;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.scroll.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 4rem;
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+  transition: all 0.5s !important;
+  transition-delay: 0 !important;
+}/*# sourceMappingURL=main-style.css.map */

@@ -4,10 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
-@import "./scss/1.reset";
-@import "./scss/2.variables";
-@import "./scss/3.utilities";
 
-
+@import "scss/2.variables";
+@import "scss/3.utilities";
