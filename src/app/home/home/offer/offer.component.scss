@@ -2,24 +2,30 @@
     display: grid;
     grid-template-rows: 2 1fr;
     row-gap: 3vh;
+    padding: 6vh 3vw;
+    margin-bottom: 5vh;
 
     &_title {
         font-size: calc(1.5rem + 4vw);
         text-align: center;
         margin-top: 2rem;
         padding: 4rem;
+        font-weight: 300;
+        text-transform: uppercase;
     }
 
     &_content {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-        gap: 6vh;
+        gap: 3vh;
         place-items: center;
+        
 
         &-card {
             width: 40rem;
             height: 40rem;
             position: relative;
+            
         }
 
         &-card-front,

@@ -7,6 +7,11 @@
       )
       [center-end] 1fr [container-end];
     grid-template-rows: min-content 90vh repeat(9, min-content);
+    background-color: #ffefe9;
+
+      background:
+    linear-gradient(to bottom, #ffefe9, transparent),
+    url(https://grainy-gradients.vercel.app/noise.svg);
 
 
 .toolbar{
@@ -18,8 +23,8 @@ app-showcase{
     grid-column: container-start/container-end;
     width: 100%;
     height: 90vh;
-    background-color: aqua;
-    background-image: linear-gradient(#ffefe982,#bcdae2eb), url("/assets/pexels-amina-filkins-5414032.jpg");
+   
+    background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5409696.jpg");
     background-size: cover;
     background-position: center;
 
@@ -36,6 +41,15 @@ app-offer{
 }
 }
 
+
+app-newsletter{
+    grid-column: container-start/container-end;
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5409734.jpg");
+    background-size: cover;
+    background-position: center;
+}
 
 
 

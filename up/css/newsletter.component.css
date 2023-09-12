@@ -1,0 +1,92 @@
+.newsletter {
+  display: grid;
+  grid-template-rows: 3 1fr;
+  align-content: center;
+  justify-content: center;
+  row-gap: 1vw;
+  padding: 7vh 4vw;
+}
+.newsletter_title {
+  font-size: calc(1.5rem + 3vw);
+  font-weight: 400;
+  color: whitesmoke;
+  padding: 1rem;
+  text-transform: uppercase;
+  margin-top: 3rem;
+  justify-self: center;
+}
+.newsletter_para {
+  font-size: calc(1rem + 1vw);
+  text-transform: uppercase;
+  font-weight: 200;
+  margin-bottom: 3rem;
+  justify-self: center;
+}
+.newsletter_content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+.newsletter_content .newsletter_content-input {
+  position: relative;
+  background-color: transparent;
+  width: 90%;
+  height: 10vh;
+  align-self: center;
+  border: none;
+  border-bottom: 1rem solid whitesmoke;
+  border-right: 0.5rem solid whitesmoke;
+  border-left: 0.5rem solid whitesmoke;
+  border-top-right-radius: 5%;
+  border-top-left-radius: 5%;
+  border-bottom-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+  font-size: 5vh;
+  color: whitesmoke;
+  text-align: center;
+  background: linear-gradient(to right, rgba(7, 169, 136, 0.5058823529), transparent), url(https://grainy-gradients.vercel.app/noise.svg);
+}
+.newsletter_content .newsletter_content-input:focus {
+  outline: none;
+}
+.newsletter_content a {
+  align-self: center;
+  padding: 1rem;
+  background-color: whitesmoke;
+  background: linear-gradient(to top, whitesmoke, transparent), url(https://grainy-gradients.vercel.app/noise.svg);
+  color: #05a081;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  width: 40%;
+  margin-top: 4rem;
+  position: relative;
+  text-align: center;
+  transition: all 1s ease-in-out;
+  z-index: 1;
+}
+.newsletter_content a::before {
+  content: "";
+  color: #05a081;
+  background-color: whitesmoke;
+  transform: scale(2rem);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05a081;
+  border-radius: inherit;
+  z-index: -1;
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
+}
+.newsletter_content a:hover::before {
+  transform: scale(1);
+}
+.newsletter_content a:hover {
+  color: white;
+  border: 0.2rem solid whitesmoke;
+}/*# sourceMappingURL=newsletter.component.css.map */
