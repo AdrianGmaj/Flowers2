@@ -1,9 +1,8 @@
 .offer {
   display: grid;
-  grid-template-rows: 2 1fr;
   row-gap: 3vh;
   padding: 6vh 3vw;
-  margin-bottom: 5vh;
+  margin-bottom: 1vh;
 }
 .offer_title {
   font-size: calc(1.5rem + 4vw);

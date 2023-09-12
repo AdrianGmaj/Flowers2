@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ShowcaseComponent } from './home/showcase/showcase.component';
 import { OfferComponent } from './home/offer/offer.component';
 import { NewsletterComponent } from './home/newsletter/newsletter.component';
+import { WhyUsComponent } from './home/why-us/why-us.component';
 
 
 
@@ -15,7 +16,8 @@ import { NewsletterComponent } from './home/newsletter/newsletter.component';
     HomeComponent,
     ShowcaseComponent,
     OfferComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    WhyUsComponent
    
   
   ],

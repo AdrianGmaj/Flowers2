@@ -1,0 +1,90 @@
+.why-us {
+    display: grid;
+    grid-template-rows: 2 1fr;
+    height: 90vh;
+    padding: 4vh 4vw;
+
+
+    h2 {
+        color: whitesmoke;
+        font-size: 5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.9rem;
+        justify-self: center;
+        padding-top: 0rem;
+    }
+
+    &_content {
+        background-color: whitesmoke;
+        
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: row;
+       
+   
+
+
+
+        &-card {
+            padding: 2vh 2vw;
+            display: grid;
+            grid-template-rows: 3 1fr;
+            row-gap: 3vh;
+            transition: all 1s ease-in-out;
+
+            span {
+                font-size: calc(3rem + 3vw);
+                justify-self: center;
+                padding: 3vh;
+                transition: transform 1s ease-in-out;
+            }
+
+            &-title {
+                justify-self: center;
+                font-size: calc(1.2rem + 1vw);
+                text-transform: uppercase;
+                
+                letter-spacing: 0.9rem;
+                font-weight: 700;
+                transition: all 1s ease-in-out;
+            }
+
+            p {
+          
+                font-size: calc(1rem + 0.2vw);
+                justify-self: center;
+                text-transform: uppercase;
+                font-weight: 200;
+                letter-spacing: 0.5rem;
+                padding: 2rem;
+            }
+        }
+    }
+
+}
+
+
+.why-us_content-card:first-child:hover .why-us_content-card-title {
+    color:#ffda03
+}
+.why-us_content-card:first-child:hover span {
+transform: rotateY(360deg);
+}
+.why-us_content-card:nth-child(2):hover .why-us_content-card-title {
+    color:#c21e56;
+}
+.why-us_content-card:nth-child(2):hover span {
+transform: rotateY(360deg);
+}
+.why-us_content-card:nth-child(3):hover .why-us_content-card-title {
+    color:#05a081
+}
+.why-us_content-card:nth-child(3):hover span {
+transform: rotateY(360deg);
+}
+@media screen and (max-width: 800px) {
+.why-us_content{
+    display: flex;
+    flex-direction: column;
+}
+    }

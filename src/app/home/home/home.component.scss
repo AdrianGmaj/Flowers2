@@ -1,48 +1,46 @@
-.home{
+.home {
     display: grid;
     grid-template-columns:
-      [container-start] 1fr [center-start] repeat(
-        6,
-        [col-start] minmax(min-content, 25rem) [col-end]
-      )
-      [center-end] 1fr [container-end];
+        [container-start] 1fr [center-start] repeat(6,
+            [col-start] minmax(min-content, 25rem) [col-end]) [center-end] 1fr [container-end];
     grid-template-rows: min-content 90vh repeat(9, min-content);
     background-color: #ffefe9;
 
-      background:
-    linear-gradient(to bottom, #ffefe9, transparent),
-    url(https://grainy-gradients.vercel.app/noise.svg);
+    background:
+        linear-gradient(to bottom, #ffefe9, transparent),
+        url(https://grainy-gradients.vercel.app/noise.svg);
 
 
-.toolbar{
-    grid-template-columns: container-start/conteinar-end;
-    height: 16rem;
+    .toolbar {
+        grid-template-columns: container-start/conteinar-end;
+        height: 16rem;
 
+    }
+
+    app-showcase {
+        grid-column: container-start/container-end;
+        width: 100%;
+        height: 90vh;
+
+        background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5409696.jpg");
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    app-showcase-text {
+        grid-column: container-start/container-end;
+        background-color: #ffefe9;
+    }
+
+    app-offer {
+        grid-column: center-start/center-end;
+        background-color: whitesmoke;
+    }
 }
-app-showcase{
-    grid-column: container-start/container-end;
-    width: 100%;
-    height: 90vh;
-   
-    background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5409696.jpg");
-    background-size: cover;
-    background-position: center;
-
-}
-
-app-showcase-text{
-    grid-column: container-start/container-end;
-    background-color: #ffefe9;
-}
-
-app-offer{
-    grid-column: center-start/center-end ;
-    background-color: whitesmoke;
-}
-}
 
 
-app-newsletter{
+app-newsletter {
     grid-column: container-start/container-end;
     width: 100%;
     height: 90vh;
@@ -52,11 +50,20 @@ app-newsletter{
 }
 
 
+app-why-us {
+    grid-column: container-start/container-end;
+    width: 100%;
+    height:100%;
+    background:
+    linear-gradient(to top, #ffefe9, transparent),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
 
 @media screen and (max-width: 400px) {
-    .toolbar{
+    .toolbar {
         grid-template-columns: container-start/conteinar-end;
         height: 5rem;
-    
+
     }
 }
