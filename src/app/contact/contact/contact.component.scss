@@ -1,0 +1,119 @@
+.contact {
+    display: grid;
+    grid-template-columns:
+        [container-start] 1fr [center-start] repeat(6,
+            [col-start] minmax(min-content, 25rem) [col-end]) [center-end] 1fr [container-end];
+
+    background-color: #ffefe9;
+
+
+
+
+
+
+    .toolbar {
+        grid-template-columns: container-start/conteinar-end;
+        height: 16rem;
+
+    }
+
+    .content {
+
+        grid-column: container-start/container-end;
+        width: 100%;
+        height: 75vh;
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+
+
+
+        &_photo {
+
+            height: inherit;
+            background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5409727.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4vh 4vw;
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h1 {
+                    font-size: calc(1.5rem + 5vw);
+                    font-weight: 400;
+                    color: whitesmoke;
+                }
+
+                p {
+                    font-size: calc(1.5rem + 1vw);
+                    font-weight: 200;
+                }
+            }
+
+
+        }
+
+        &_form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2vh;
+            justify-content: center;
+
+            background-image: linear-gradient(#ffefe982, #0ea78660);
+            padding: 2vh 2vw;
+
+            i {
+                color: black;
+                font-size: calc(1.2rem + 0.5vw), ;
+            }
+
+            &-card-1,
+            &-card-2,
+            &-card-3 {
+                background-color: whitesmoke;
+                border-radius: 0.5rem;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+                display: grid;
+                grid-template-rows: repeat(auto-fit, minmax(3, 1fr));
+
+                h4 {
+                    text-transform: uppercase;
+                    font-size: calc(1.2rem + 0.5vw);
+                    font-weight: 400;
+                    justify-self: center;
+                    padding: 1rem;
+
+                }
+
+                &-items {
+                    padding: 2vh;
+
+                    ul {
+                       
+                        text-transform: uppercase;
+                        li{
+                            display: flex;
+                            flex-direction: row;
+                           justify-content: space-between;
+                           padding-left: 30%;
+                           padding-right: 30%;
+                           padding-bottom: 1rem;
+                        }
+
+                      
+                    }
+                }
+
+            }
+
+        }
+
+    }
+}

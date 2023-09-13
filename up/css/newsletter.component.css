@@ -49,6 +49,20 @@
 .newsletter_content .newsletter_content-input:focus {
   outline: none;
 }
+.newsletter_content input::-moz-placeholder {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 2vh;
+  letter-spacing: 0.5rem;
+  font-weight: 200;
+}
+.newsletter_content input::placeholder {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 2vh;
+  letter-spacing: 0.5rem;
+  font-weight: 200;
+}
 .newsletter_content a {
   align-self: center;
   padding: 1rem;
