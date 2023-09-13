@@ -1,7 +1,7 @@
 .contact {
   display: grid;
   grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 25rem) [col-end]) [center-end] 1fr [container-end];
-  background-color: #ffefe9;
+  background: linear-gradient(to top, rgba(255, 239, 233, 0.5098039216), rgba(255, 239, 233, 0.862745098)), url(https://grainy-gradients.vercel.app/noise.svg);
 }
 .contact .toolbar {
   grid-template-columns: container-start/conteinar-end;
@@ -78,4 +78,12 @@
   padding-left: 30%;
   padding-right: 30%;
   padding-bottom: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .contact .content {
+    grid-template-columns: 1fr;
+  }
+  .contact .content_photo {
+    display: none;
+  }
 }/*# sourceMappingURL=contact.component.css.map */

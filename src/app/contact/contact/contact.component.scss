@@ -4,7 +4,8 @@
         [container-start] 1fr [center-start] repeat(6,
             [col-start] minmax(min-content, 25rem) [col-end]) [center-end] 1fr [container-end];
 
-    background-color: #ffefe9;
+    background: linear-gradient(to top, #ffefe982, #ffefe9dc),
+        url(https://grainy-gradients.vercel.app/noise.svg);
 
 
 
@@ -96,18 +97,19 @@
                     padding: 2vh;
 
                     ul {
-                       
+
                         text-transform: uppercase;
-                        li{
+
+                        li {
                             display: flex;
                             flex-direction: row;
-                           justify-content: space-between;
-                           padding-left: 30%;
-                           padding-right: 30%;
-                           padding-bottom: 1rem;
+                            justify-content: space-between;
+                            padding-left: 30%;
+                            padding-right: 30%;
+                            padding-bottom: 1rem;
                         }
 
-                      
+
                     }
                 }
 
@@ -116,4 +118,15 @@
         }
 
     }
+
+    @media screen and (max-width: 600px) {
+        .content {
+            grid-template-columns: 1fr;
+        }
+
+        .content_photo {
+            display: none;
+        }
+    }
+
 }

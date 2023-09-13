@@ -4,6 +4,8 @@
   justify-content: space-evenly;
   height: 100%;
   position: relative;
+  background: linear-gradient(to top, rgb(245, 245, 245), transparent), url(https://grainy-gradients.vercel.app/noise.svg);
+  border-top: 1rem solid whitesmoke;
 }
 .footer i {
   color: black;
