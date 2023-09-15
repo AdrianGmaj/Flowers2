@@ -1,0 +1,71 @@
+.shop {
+
+
+
+    background: linear-gradient(to top, #ffefe982, #ffefe9dc),
+        url(https://grainy-gradients.vercel.app/noise.svg);
+
+    .toolbar {
+        grid-template-columns: container-start/conteinar-end;
+        height: 16rem;
+
+    }
+
+    &_container {
+        display: grid;
+        grid-template-rows: 10% auto;
+      
+  
+
+
+        &-sidenav {
+            background-color: whitesmoke;
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .2);
+            position: fixed;
+            
+            width: 100%;
+            display: grid;
+            align-items: center;
+            z-index: 22;
+          
+           
+            
+          
+    
+          
+
+            .list-container {
+               padding: 1rem ;
+             
+
+
+                ul {
+                    
+                  position: sticky;
+                  top:0;
+                  left: 0;
+                    display: flex;
+                    flex-direction: row;
+                    
+                   align-items: center;
+                   gap:4vh;
+                 
+                   justify-content: space-evenly;
+
+
+                    li {
+                       
+                        font-size: calc(1rem + 0.5vh);
+                       
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.shop_container-content{
+    margin-top: 3vh;
+}
+

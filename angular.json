@@ -68,7 +68,8 @@
               "browserTarget": "Flower2:build:production"
             },
             "development": {
-              "browserTarget": "Flower2:build:development"
+              "browserTarget": "Flower2:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

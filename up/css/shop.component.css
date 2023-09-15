@@ -1,0 +1,40 @@
+.shop {
+  background: linear-gradient(to top, rgba(255, 239, 233, 0.5098039216), rgba(255, 239, 233, 0.862745098)), url(https://grainy-gradients.vercel.app/noise.svg);
+}
+.shop .toolbar {
+  grid-template-columns: container-start/conteinar-end;
+  height: 16rem;
+}
+.shop_container {
+  display: grid;
+  grid-template-rows: 10% auto;
+}
+.shop_container-sidenav {
+  background-color: whitesmoke;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  z-index: 22;
+}
+.shop_container-sidenav .list-container {
+  padding: 1rem;
+}
+.shop_container-sidenav .list-container ul {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4vh;
+  justify-content: space-evenly;
+}
+.shop_container-sidenav .list-container ul li {
+  font-size: calc(1rem + 0.5vh);
+}
+
+.shop_container-content {
+  margin-top: 3vh;
+}/*# sourceMappingURL=shop.component.css.map */

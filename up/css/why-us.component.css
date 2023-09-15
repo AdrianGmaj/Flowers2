@@ -1,7 +1,6 @@
 .why-us {
   display: grid;
   grid-template-rows: 2 1fr;
-  height: 90vh;
   padding: 4vh 4vw;
 }
 .why-us h2 {

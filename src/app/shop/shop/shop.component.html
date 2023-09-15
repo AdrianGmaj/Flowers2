@@ -1,0 +1,20 @@
+<section class="shop">
+
+  <div class="toolbar"></div>
+  <div class="shop_container">
+
+    <div class="shop_container-sidenav">
+      <div class="list-container">
+        <ul>
+          <li *ngFor="let category of categories$ | async ">{{category.name}}</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="shop_container-content">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+</section>
