@@ -33,8 +33,10 @@
 }
 .shop_container-sidenav .list-container ul li {
   font-size: calc(1rem + 0.5vh);
+  cursor: pointer;
 }
 
 .shop_container-content {
   margin-top: 3vh;
+  min-height: 110rem;
 }/*# sourceMappingURL=shop.component.css.map */
