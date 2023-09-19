@@ -11,11 +11,13 @@ import { ShopModule } from './shop/shop.module';
 import { CategoriesService } from './services/categories/categories.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsService } from './services/products/products.service';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

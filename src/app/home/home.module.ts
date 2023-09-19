@@ -7,7 +7,7 @@ import { ShowcaseComponent } from './home/showcase/showcase.component';
 import { OfferComponent } from './home/offer/offer.component';
 import { NewsletterComponent } from './home/newsletter/newsletter.component';
 import { WhyUsComponent } from './home/why-us/why-us.component';
-import { FooterComponent } from './home/footer/footer.component';
+
 
 
 
@@ -19,7 +19,7 @@ import { FooterComponent } from './home/footer/footer.component';
     OfferComponent,
     NewsletterComponent,
     WhyUsComponent,
-    FooterComponent
+   
    
   
   ],
