@@ -1,0 +1,37 @@
+.admin {
+    background: linear-gradient(to top, #ffefe982, #ffefe9dc),
+        url(https://grainy-gradients.vercel.app/noise.svg);
+
+    .toolbar {
+        grid-template-columns: container-start/conteinar-end;
+        height: 16rem;
+
+
+      
+    }
+
+    .admin_content {
+        display: grid;
+        height: 100vh;
+       grid-template-columns: 15% 85%;
+
+
+       .side-bar{
+        background-color: whitesmoke;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+        padding: calc(1rem + 1vw);
+
+        &_content{
+            font-size: calc(1rem + 0.5vh);
+            text-transform: uppercase;
+            letter-spacing: 0.4rem;
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: calc(1rem + 1vw);
+            }
+        }
+       }
+    }
+}

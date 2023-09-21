@@ -62,15 +62,6 @@ app-why-us {
     url(https://grainy-gradients.vercel.app/noise.svg);
 }
 
-app-footer{
-    grid-column: container-start/container-end;
-    width: 100%;
-    height: 20vh;
-    background:  linear-gradient(to top, rgb(245, 245, 245), transparent),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-    border-top: 1rem solid whitesmoke;
-}
-
 
 
 @media screen and (max-width: 400px) {

@@ -12,6 +12,7 @@ import { CategoriesService } from './services/categories/categories.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsService } from './services/products/products.service';
 import { FooterComponent } from './footer/footer.component';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
     HomeModule,
     ShopModule,
     ContactModule,
+    AdminModule,
     RouterModule,
     HttpClientModule
 
