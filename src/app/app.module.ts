@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductsService } from './services/products/products.service';
 import { FooterComponent } from './footer/footer.component';
 import { AdminModule } from './admin/admin.module';
+import { MeterialDesignModule } from './meterial-design/meterial-design.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AdminModule } from './admin/admin.module';
     ContactModule,
     AdminModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    MeterialDesignModule
 
   ],
   providers: [CategoriesService,
