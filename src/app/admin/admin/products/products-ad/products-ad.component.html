@@ -1,0 +1,48 @@
+<form [formGroup]="productAddForm" class="p-3" action="">
+  <div class="m-2">
+      <mat-form-field appearance="fill">
+        <mat-label>category</mat-label>
+        <mat-select formControlName="categoryId"   >
+
+          <mat-option [value]="category.id" *ngFor="let category of categories$ | async" >{{category.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  <div class="m-2">
+      <mat-form-field appearance="fill">
+        <mat-label>price</mat-label>
+        <input formControlName="price" type="number" matInput>
+      </mat-form-field>
+    </div>
+  <div class="m-2">
+      <mat-form-field appearance="fill">
+        <mat-label>name</mat-label>
+        <input formControlName="name" type="text" matInput>
+      </mat-form-field>
+    </div>
+    <div class="m-2">
+      <mat-form-field appearance="fill">
+        <mat-label>thumbnail</mat-label>
+        <input formControlName="thumbnail" type="text" matInput>
+      </mat-form-field>
+    </div>
+    <div class="m-2">
+      <mat-form-field appearance="fill">
+        <mat-label>image</mat-label>
+        <input formControlName="image" type="text" matInput>
+      </mat-form-field>
+    </div>
+    <div class="m-2">
+      <mat-checkbox  formControlName="active" >Published</mat-checkbox>
+    </div>
+    
+    <div class="m-2">
+      <mat-form-field appearance="fill">
+        <mat-label>description</mat-label>
+        <input formControlName="description" type="text" matInput>
+      </mat-form-field>
+    </div>
+   
+  
+    <button (click)="addProduct(productAddForm.value)" mat-flat-button color="accent" type="submit">ADD</button>
+    </form>
