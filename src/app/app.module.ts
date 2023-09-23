@@ -14,6 +14,8 @@ import { ProductsService } from './services/products/products.service';
 import { FooterComponent } from './footer/footer.component';
 import { AdminModule } from './admin/admin.module';
 import { MeterialDesignModule } from './meterial-design/meterial-design.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { MeterialDesignModule } from './meterial-design/meterial-design.module';
     AdminModule,
     RouterModule,
     HttpClientModule,
-    MeterialDesignModule
+    MeterialDesignModule,
+    BrowserAnimationsModule,
+    FormsModule
 
   ],
   providers: [CategoriesService,

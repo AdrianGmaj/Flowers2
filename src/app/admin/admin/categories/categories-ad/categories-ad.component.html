@@ -1,0 +1,27 @@
+<form [formGroup]="categoryAddForm"  class="p-3" action="">
+  <div class="m-2">
+      <mat-form-field appearance="fill">
+        <mat-label>name</mat-label>
+        <input formControlName="name" type="text" matInput>
+      </mat-form-field>
+    </div>
+  
+  <div class="m-2">
+      <mat-form-field appearance="fill">
+        <mat-label>thumbnail</mat-label>
+        <input formControlName="thumbnail" type="text" matInput>
+      </mat-form-field>
+    </div>
+  <div class="m-2">
+      <mat-form-field appearance="fill">
+        <mat-label>image</mat-label>
+        <input formControlName="image" type="text" matInput>
+      </mat-form-field>
+    </div>
+    <div class="m-2">
+      <mat-checkbox  formControlName="active" >Published</mat-checkbox>
+    </div>
+  
+  
+    <button (click)="addCategory(categoryAddForm.value)" mat-flat-button color="accent" type="submit">ADD</button>
+    </form>
