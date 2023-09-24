@@ -1,0 +1,57 @@
+<mat-card *ngIf="productEditForm">
+  <div class="container-fluid">
+    <mat-card-title>
+      <h3><b>edit product</b></h3>
+    </mat-card-title>
+    <mat-divider></mat-divider>
+    <form [formGroup]="productEditForm" class="p-3" action="">
+      <div class="m-2">
+        <mat-form-field appearance="fill">
+          <mat-label>category</mat-label>
+          <mat-select formControlName="categoryId">
+            <mat-option *ngFor="let category of categories" [value]="category.id">{{category.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="m-2">
+        <mat-form-field appearance="fill">
+          <mat-label>price</mat-label>
+          <input formControlName="price" type="number" matInput>
+        </mat-form-field>
+      </div>
+      <div class="m-2">
+        <mat-form-field appearance="fill">
+          <mat-label>name</mat-label>
+          <input formControlName="name" type="text" matInput>
+        </mat-form-field>
+      </div>
+      <div class="m-2">
+        <mat-form-field appearance="fill">
+          <mat-label>thumbnail</mat-label>
+          <input formControlName="thumbnail" type="text" matInput>
+        </mat-form-field>
+      </div>
+      <div class="m-2">
+        <mat-form-field appearance="fill">
+          <mat-label>image</mat-label>
+          <input formControlName="image" type="text" matInput>
+        </mat-form-field>
+      </div>
+      <div class="m-2">
+        <mat-checkbox formControlName="active">Published</mat-checkbox>
+      </div>
+
+      <div class="m-2">
+        <mat-form-field appearance="fill">
+          <mat-label>description</mat-label>
+          <input formControlName="description" type="text" matInput>
+        </mat-form-field>
+      </div>
+
+
+      <button (click)="editProduct(productId, productEditForm.value)" mat-flat-button color="accent"
+        type="submit">ADD</button>
+    </form>
+  </div>
+
+</mat-card>
