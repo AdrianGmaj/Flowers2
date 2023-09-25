@@ -16,6 +16,7 @@ import { AdminModule } from './admin/admin.module';
 import { MeterialDesignModule } from './meterial-design/meterial-design.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     MeterialDesignModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    AuthModule
 
   ],
   providers: [CategoriesService,

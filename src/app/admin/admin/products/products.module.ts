@@ -11,11 +11,15 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInput, MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { ProductsEditComponent } from './products-edit/products-edit.component';
+import { MatDivider, MatDividerModule } from '@angular/material/divider';
 
 
 @NgModule({
   declarations: [ProductsListComponent,
-  ProductsAdComponent],
+  ProductsAdComponent,
+ProductsEditComponent],
   imports: [
     CommonModule,
     ProductsRoutingModule,
@@ -27,7 +31,9 @@ import { MatInput, MatInputModule } from '@angular/material/input';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatCardModule,
+    MatDividerModule
   ]
 })
 export class ProductsModule { }

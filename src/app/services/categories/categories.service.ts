@@ -22,4 +22,11 @@ export class CategoriesService {
   addCategory(value: CategoryPost): Observable<CategoryResponse> {
     return this.http.post<CategoryResponse>('api/categories', value)
   }
+  deleteCategory(id):Observable<CategoryResponse>{
+    return this.http.delete<CategoryResponse>(`/api/categories/${id}`)
+  }
+
+  editCategory(id:number,value:CategoryPost):Observable<CategoryResponse>{
+    return this.http.patch<CategoryResponse>(`api/categories/${id}`,value)
+  }
 }

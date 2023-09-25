@@ -22,10 +22,18 @@ export class ProductsListComponent implements OnInit {
     'actions',
 
   ];
-  constructor( private productsService: ProductsService) { }
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit() {
     this.products$ = this.productsService.getAllProducts()
   }
+
+
+  deleteProduct(id) {
+    this.productsService.deleteProduct(id).subscribe(() => {
+      this.products$ = this.productsService.getAllProducts()
+    })
+  }
+
 
 }

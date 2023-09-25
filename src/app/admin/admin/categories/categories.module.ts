@@ -11,12 +11,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { CategoriesAdComponent } from './categories-ad/categories-ad.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CategoriesEditComponent } from './categories-edit/categories-edit.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
 
 
 
 @NgModule({
   declarations: [CategoriesListComponent,
-  CategoriesAdComponent],
+    CategoriesAdComponent,
+    CategoriesEditComponent],
   imports: [
     CommonModule,
     CategoriesRoutingModule,
@@ -27,9 +31,11 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatTableModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule
-    
-    
+    MatCheckboxModule,
+    MatDividerModule,
+    MatCardModule
+
+
 
   ]
 })
