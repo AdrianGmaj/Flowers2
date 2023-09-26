@@ -1,0 +1,21 @@
+.user{
+    display: grid;
+    grid-template-columns:
+        [container-start] 1fr [center-start] repeat(6,
+            [col-start] minmax(min-content, 25rem) [col-end]) [center-end] 1fr [container-end];
+
+    background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5409735.jpg");
+    background-size: cover;
+    background-position: center;
+
+
+
+    .toolbar {
+        grid-template-columns: container-start/conteinar-end;
+        height: 16rem;
+
+    }
+    &-container{
+        height: 100vh;
+    }
+}

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, map } from 'rxjs';
+import { BasketService } from 'src/app/services/basket/basket.service';
 import { CategoriesService } from 'src/app/services/categories/categories.service';
 import { CategoryResponse } from 'src/app/services/categories/categoryResponse';
 import { ProductResponse } from 'src/app/services/products/ProductResponse';
@@ -15,10 +16,12 @@ export class SelectedCategoryComponent implements OnInit {
   categoryId: string;
   category$: Observable<CategoryResponse>;
   products$: Observable<Array<ProductResponse>>
+  
   constructor(
     private route: ActivatedRoute,
     private categoriesService: CategoriesService,
-    private productsService: ProductsService
+    private productsService: ProductsService,
+    private basketService: BasketService
   ) { }
 
   ngOnInit() {
@@ -34,4 +37,7 @@ export class SelectedCategoryComponent implements OnInit {
     })
   }
 
+  addProduct(product){
+    this.basketService.addProduct(product)
+      }
 }

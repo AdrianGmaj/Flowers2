@@ -6,7 +6,7 @@
       <p>to complete your order and see your purchase history</p>
     </div>
 
-    <form action="" [formGroup]="SignUpForm">
+    <form (ngSubmit)="onSubmit()" action="" [formGroup]="SignUpForm">
       <input formControlName="email" type="email" placeholder="email">
       <mat-error style="color:#ffda03"  *ngIf="SignUpForm.get('email').hasError('required')">
         email required

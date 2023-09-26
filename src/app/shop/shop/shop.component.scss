@@ -4,6 +4,7 @@
 
     background: linear-gradient(to top, #ffefe982, #ffefe9dc),
         url(https://grainy-gradients.vercel.app/noise.svg);
+        
 
     .toolbar {
         grid-template-columns: container-start/conteinar-end;
@@ -14,6 +15,7 @@
     &_container {
         display: grid;
         grid-template-rows: 10% auto;
+        
 
 
 
@@ -35,6 +37,7 @@
 
 
             .list-container {
+                
                 padding: 1rem;
 
 
@@ -92,6 +95,7 @@
 .shop_container-content {
     margin-top: 3vh;
     min-height: 110rem;
+    padding: 6vh 4vw;
 }
 
 .active{

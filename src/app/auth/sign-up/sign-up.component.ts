@@ -34,4 +34,12 @@ export class SignUpComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit() {
+    this.authService.signUp(this.SignUpForm.getRawValue())
+    .subscribe(response =>{
+     if(response.success){
+      this.router.navigateByUrl('sign-in')
+     }
+    })
+   }
 }

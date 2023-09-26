@@ -7,7 +7,7 @@
           <h5 class="card-title">{{product.name}}</h5>
           <h5 class="card-title">{{product.price}}$</h5>
           <p class="card-text">{{product.description}}</p>
-          <a  href="#" >add to basket</a>
+          <a  (click)="addProduct(product)" >add to basket</a>
         </div>
       </div>
     </li>

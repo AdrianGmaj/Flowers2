@@ -2,12 +2,12 @@
 <ul class="cards_list">
   <li  *ngFor="let product of products$ | async">
     <div class="card text-center" >
-      <img src="{{product.image}}" class="card-img-top" alt="...">
+      <img src="{{product.image}}" class="card-img-top " alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{product.name}}</h5>
-        <h5 class="card-title">{{product.price}}$</h5>
-        <p class="card-text">{{product.description}}</p>
-        <a  href="#" >add to basket</a>
+        <h3 class="card-title p-2">{{product.name | uppercase}}</h3>
+        <h5 class="card-title p-2">{{product.price}}$</h5>
+        <p class="card-text p-4">{{product.description}}</p>
+        <a  (click)="addProduct(product)"  >add to basket</a>
       </div>
     </div>
   </li>

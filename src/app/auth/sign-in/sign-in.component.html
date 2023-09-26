@@ -18,9 +18,9 @@
       <mat-error style="color:#ffda03;" *ngIf=" SignInForm.get('password').hasError('required')">
         password requaired
       </mat-error>
-      <button type="submit">log in</button>
+      <button [disabled]="SignInForm.invalid">log in</button>
     </form>
-
+{{SignInForm.value | json }}
     <a routerLink="/sign-up">if you dont have account you can register here</a>
   </div>
 </section>
