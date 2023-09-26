@@ -6,10 +6,21 @@
       <p>to complete your order and see your purchase history</p>
     </div>
 
-    <form action="">
-      <input type="email" placeholder="email">
-      <input type="password" placeholder="password">
+    <form (ngSubmit)="onSubmit()" action="" [formGroup]="SignInForm">
+      <input formControlName="email" type="email" placeholder="email">
+      <mat-error style="color:#ffda03"  *ngIf="SignInForm.get('email').hasError('required')">
+        email required
+        </mat-error>
+        <mat-error  style="color:#ffda03" *ngIf="SignInForm.get('email').hasError('email')">
+        enter valid email
+        </mat-error>
+      <input formControlName="password" type="password" placeholder="password">
+      <mat-error style="color:#ffda03;" *ngIf=" SignInForm.get('password').hasError('required')">
+        password requaired
+      </mat-error>
       <button type="submit">log in</button>
     </form>
+
+    <a routerLink="/sign-up">if you dont have account you can register here</a>
   </div>
 </section>

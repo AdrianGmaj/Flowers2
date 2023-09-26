@@ -17,6 +17,7 @@ import { MeterialDesignModule } from './meterial-design/meterial-design.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
+import { AuthService } from './services/auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AuthModule } from './auth/auth.module';
 
   ],
   providers: [CategoriesService,
-    ProductsService],
+    ProductsService,
+  AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
