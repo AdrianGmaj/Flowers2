@@ -5,10 +5,12 @@ import { BasketRoutingModule } from './basket-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { BasketComponent } from './basket/basket.component';
+import { BasketEmptyComponent } from './basket-empty/basket-empty.component';
 
 
 @NgModule({
-  declarations: [BasketComponent],
+  declarations: [BasketComponent,
+  BasketEmptyComponent],
   imports: [
     CommonModule,
     BasketRoutingModule,
