@@ -12,24 +12,49 @@
 
     .admin_content {
         display: grid;
-        height: 100vh;
-       grid-template-columns: 15% 85%;
+        grid-template-rows: 30% auto;
+        
+
 
 
        .side-bar{
         background-color: whitesmoke;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
-        padding: calc(1rem + 1vw);
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .2);
+        position: fixed;
+        height: 10%;
+        width: 100%;
+        display: grid;
+        align-items: center;
+        z-index: 22;
 
         &_content{
+            
             font-size: calc(1rem + 0.5vh);
             text-transform: uppercase;
             letter-spacing: 0.4rem;
 
             ul{
+                position: sticky;
+                top: 0;
+                left: 0;
                 display: flex;
-                flex-direction: column;
-                gap: calc(1rem + 1vw);
+                flex-direction: row;
+
+                align-items: center;
+                gap: 4vh;
+
+                justify-content: space-evenly;
+                
+                li {
+
+                    font-size: calc(1rem + 0.5vh);
+                    cursor: pointer;
+                    position: relative;
+                    overflow: hidden;
+                    transition: all 0.5s ease;
+
+             
+                }
             }
         }
        }

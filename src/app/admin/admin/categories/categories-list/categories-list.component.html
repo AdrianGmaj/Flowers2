@@ -1,3 +1,4 @@
+<section class="list">
 <div class="container">
   <button routerLink="addCategory" mat-flat-button color="accent">add new</button>
   <table mat-table [dataSource]="categories$ | async" class="mat-elevation-z8">
@@ -34,3 +35,4 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
   </div>
+</section>

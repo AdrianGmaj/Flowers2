@@ -38,18 +38,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 4vh 4vw;
+        
 
             &-text {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+    
 
                 h1 {
                     font-size: calc(1.5rem + 5vw);
                     font-weight: 400;
                     color: whitesmoke;
+                    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+                    padding: 6vh 4vw;
                 }
 
                 p {

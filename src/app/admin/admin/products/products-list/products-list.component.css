@@ -1,0 +1,4 @@
+.list{
+    padding: calc(5rem + 10vw);
+    min-height: 100vh;
+}
