@@ -39,6 +39,7 @@ export class SignUpComponent implements OnInit {
     .subscribe(response =>{
      if(response.success){
       this.router.navigateByUrl('sign-in')
+      console.log(this.SignUpForm.getRawValue())
      }
     })
    }

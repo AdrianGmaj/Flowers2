@@ -1,5 +1,8 @@
 <div class="container">
+  <i routerLink="/admin/categories" class="fa-solid fa-arrow-left-long">back</i>
+  <mat-card>
   <h2>ADD PRODUCT</h2>
+
 <form [formGroup]="productAddForm" class="p-3" action="">
   <div class="m-2">
       <mat-form-field appearance="fill">
@@ -48,4 +51,5 @@
   
     <button (click)="addProduct(productAddForm.value)" mat-flat-button color="accent" type="submit">ADD</button>
     </form>
+  </mat-card>
   </div>

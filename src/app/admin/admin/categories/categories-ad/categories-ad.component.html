@@ -1,4 +1,6 @@
 <div class="container">
+  <i routerLink="/admin/categories" class="fa-solid fa-arrow-left-long">back</i>
+  <mat-card>
   <h2>ADD CATEGORY</h2>
   <form [formGroup]="categoryAddForm" class="p-3" action="">
     <div class="m-2">
@@ -27,4 +29,5 @@
 
     <button (click)="addCategory(categoryAddForm.value)" mat-flat-button color="accent" type="submit">ADD</button>
   </form>
+</mat-card>
 </div>

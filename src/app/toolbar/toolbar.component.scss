@@ -37,7 +37,10 @@
         display: flex;
         justify-content: space-evenly;
 
-
+a{
+    display: flex;
+    flex-direction: row;
+}
 
 
         a, i {

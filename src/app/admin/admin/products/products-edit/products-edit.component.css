@@ -7,3 +7,9 @@ mat-form-field{
     min-height: 100vh;
 
 }
+i{
+    color:whitesmoke;
+    font-size: 3rem;
+    padding: 1rem;
+    cursor: pointer;
+}

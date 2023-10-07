@@ -1,6 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -19,9 +21,10 @@ export class SignInComponent implements OnInit {
       [Validators.required]),
 
   })
-  authService: any;
-  router: any;
-  constructor() { }
+
+
+  constructor(private authService: AuthService,
+    private router: Router) { }
 
   ngOnInit() {
 
