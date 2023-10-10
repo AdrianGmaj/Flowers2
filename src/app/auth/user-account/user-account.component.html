@@ -1,6 +1,56 @@
 <section class="user">
   <div class="toolbar"></div>
- <div class="user-container">
-  elomordy
- </div>
+  <div class="user-container">
+    <div class="user-container_photo">
+     <span class="header"> <h2>Welcome user!</h2><i class="fa-solid fa-user"></i></span>
+      <p>now you can finalize your purchases and view your purchase history</p>
+
+      <div class="buttons">
+        <a routerLink="/shop"> go shoping<span class="material-symbols-outlined">
+          shopping_cart
+          </span></a>
+        <a routerLink="/shop"> your basket<span class="material-symbols-outlined">
+          shopping_basket
+          </span></a>
+        <a class="log-out" (click)="logOut()"> log out<span class="material-symbols-outlined ">
+          logout
+          </span></a>
+      </div>
+    </div>
+
+    <div class="user-container_history">
+      <h3>your purchase history</h3>
+      <mat-card>  
+        <cdk-accordion class="example-accordion">
+          <cdk-accordion-item
+            *ngFor="let item of orders |async; let index = index;"
+            #accordionItem="cdkAccordionItem"
+            class="example-accordion-item"
+            role="button"
+            tabindex="0"
+            [attr.id]="'accordion-header-' + index"
+            [attr.aria-expanded]="accordionItem.expanded"
+            [attr.aria-controls]="'accordion-body-' + index">
+            <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+              {{ item }}
+              <span class="example-accordion-item-description">
+                Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+              </span>
+            </div>
+            <div
+              class="example-accordion-item-body"
+              role="region"
+              [style.display]="accordionItem.expanded ? '' : 'none'"
+              [attr.id]="'accordion-body-' + index"
+              [attr.aria-labelledby]="'accordion-header-' + index">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
+              excepturi incidunt ipsum deleniti labore, tempore non nam doloribus blanditiis
+              veritatis illo autem iure aliquid ullam rem tenetur deserunt velit culpa?
+            </div>
+          </cdk-accordion-item>
+        </cdk-accordion>
+        </mat-card>
+    
+    </div>
+  </div>
 </section>

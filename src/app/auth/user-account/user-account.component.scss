@@ -1,12 +1,9 @@
-.user{
+.user {
     display: grid;
     grid-template-columns:
         [container-start] 1fr [center-start] repeat(6,
             [col-start] minmax(min-content, 25rem) [col-end]) [center-end] 1fr [container-end];
 
-    background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5409735.jpg");
-    background-size: cover;
-    background-position: center;
 
 
 
@@ -15,7 +12,218 @@
         height: 16rem;
 
     }
-    &-container{
-        height: 100vh;
+
+    &-container {
+
+
+        grid-column: container-start/container-end;
+        width: 100%;
+        min-height: 75vh;
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        &_photo {
+            background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5409735.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 6vh 4vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .header {
+            display: flex;
+        }
+
+        h2 {
+            font-size: calc(3rem + 2vw), ;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: whitesmoke;
+            padding: 3rem;
+        }
+
+        i {
+            font-size: calc(3rem + 2vw), ;
+            color: #ffda03;
+        }
+
+        p {
+            font-size: calc(1rem + 0.5vw);
+            text-transform: uppercase;
+            font-weight: 200;
+            margin-bottom: 3rem;
+            justify-self: center;
+            line-height: 4rem;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        a {
+            padding: 1rem;
+            background-color: whitesmoke;
+            background: linear-gradient(to top, whitesmoke, transparent),
+                url(https://grainy-gradients.vercel.app/noise.svg);
+            color: #05a081;
+            text-transform: uppercase;
+
+
+            font-size: 3rem;
+            border-radius: 0.5rem;
+            min-width: 40%;
+
+            position: relative;
+            text-align: center;
+            transition: all 1s ease-in-out;
+            z-index: 1;
+            border: 0.2rem solid #05a081;
+        }
+
+        a.log-out {
+            padding: 1rem;
+            background-color: #05a081;
+            ;
+            background: linear-gradient(to top, #05a081, transparent),
+                url(https://grainy-gradients.vercel.app/noise.svg);
+            color: whitesmoke;
+            text-transform: uppercase;
+
+
+            font-size: 3rem;
+            border-radius: 0.5rem;
+            min-width: 40%;
+
+            position: relative;
+            text-align: center;
+            transition: all 1s ease-in-out;
+            z-index: 1;
+            border: 0.2rem solid whitesmoke;
+            text-decoration: none;
+        }
+
+        a::before {
+            content: "";
+            color: #05a081;
+            background-color: whitesmoke;
+            transform: scale(2rem);
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #05a081;
+            border-radius: inherit;
+            z-index: -1;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out;
+        }
+
+        a.log-out::before {
+            content: "";
+            color: #05a081;
+            background-color: whitesmoke;
+            transform: scale(2rem);
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #ffda03;
+            border-radius: inherit;
+            z-index: -1;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out;
+        }
+
+        a:hover::before {
+            transform: scale(1);
+        }
+
+        a:hover {
+            color: white;
+            background-color: #05a081;
+            border: 0.2rem solid whitesmoke;
+        }
+
+        a.log-out:hover {
+            color: white;
+            background-color: #ffda03;
+            border: 0.2rem solid whitesmoke;
+        }
+
+
+        &_history {
+            background: linear-gradient(to top, #ffefe982, #ffefe9dc),
+            url(https://grainy-gradients.vercel.app/noise.svg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1vh 1vw;
+
+            h3 {
+                font-size: calc(2rem + 2vw), ;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: whitesmoke;
+                padding: 3rem;
+            }
+
+            .example-accordion {
+                display: block;
+                padding: 1vh
+            }
+
+            .example-accordion-item {
+                display: block;
+                border: solid 1px #ccc;
+            }
+
+            .example-accordion-item+.example-accordion-item {
+                border-top: none;
+            }
+
+            .example-accordion-item-header {
+                display: flex;
+                align-content: center;
+                justify-content: space-between;
+            }
+
+            .example-accordion-item-description {
+                font-size: 0.85em;
+                color: #999;
+            }
+
+            .example-accordion-item-header,
+            .example-accordion-item-body {
+                padding: 16px;
+            }
+
+            .example-accordion-item-header:hover {
+                cursor: pointer;
+                background-color: #eee;
+            }
+
+            .example-accordion-item:first-child {
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+
+            .example-accordion-item:last-child {
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+
+        }
+
     }
 }

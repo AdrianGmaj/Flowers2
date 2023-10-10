@@ -20,6 +20,7 @@ import { AuthModule } from './auth/auth.module';
 import { AuthService } from './services/auth/auth.service';
 import { BasketModule } from './basket/basket.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { BasketModule } from './basket/basket.module';
     BrowserAnimationsModule,
     FormsModule,
     AuthModule,
-    BasketModule
+    BasketModule,
+    
 
   ],
   providers: [CategoriesService,

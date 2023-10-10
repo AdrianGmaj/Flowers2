@@ -7,6 +7,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { UserAccountComponent } from './user-account/user-account.component';
+import { MatCardModule } from '@angular/material/card';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+import { MatAccordion } from '@angular/material/expansion';
 
 
 
@@ -21,7 +24,11 @@ import { UserAccountComponent } from './user-account/user-account.component';
     AuthRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    CdkAccordionModule,
+
+    
   ]
 })
 export class AuthModule { }
