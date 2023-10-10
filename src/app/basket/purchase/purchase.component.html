@@ -1,0 +1,82 @@
+<section class="purchase">
+  <div class="toolbar"></div>
+  <div class="purchase-content">
+<mat-card>
+  <div class="form">
+    <form (ngSubmit)="buy()" [formGroup]="PurchaseData" action="">
+      <h2>Personal data <span class="material-symbols-outlined">
+          face_2
+        </span></h2>
+      <mat-divider></mat-divider>
+      <div class="m-2">
+        <mat-form-field>
+          <mat-label>name</mat-label>
+          <input formControlName="name" type="text" matInput>
+
+
+        </mat-form-field>
+      </div>
+      <div class="m-2">
+        <mat-form-field>
+          <mat-label>city</mat-label>
+          <input formControlName="city" type="text" matInput>
+
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <mat-label>address</mat-label>
+          <input formControlName="address" type="text" matInput>
+
+        </mat-form-field>
+      </div>
+
+
+
+      <h2>Card data <span class="material-symbols-outlined">
+          credit_card
+        </span></h2>
+      <mat-divider></mat-divider>
+
+      <div class="m-2">
+        <mat-form-field>
+
+          <mat-label>cardNumber</mat-label>
+          <input formControlName="cardNumber" type="number" matInput>
+
+        </mat-form-field>
+      </div>
+
+      <div class="m-2">
+        <mat-form-field>
+          <mat-label>expiration</mat-label>
+          <input formControlName="expiration" type="number" matInput>
+
+        </mat-form-field>
+      </div>
+
+      <div >
+        <mat-form-field>
+          <mat-label>security code</mat-label>
+          <input formControlName="security" type="number" matInput>
+
+        </mat-form-field>
+      </div>
+      <div class="d-flex  justify-content-center p-3">
+
+      </div>
+      <div class="d-flex  justify-content-center p-3">
+        <button routerLink="/user" type="submit" [disabled]="PurchaseData.invalid" mat-stroked-button> purchase</button>
+      </div>
+    </form>
+  </div>
+    <div class="photo">
+    <h2>thank you for trust</h2>
+    <p>hope you gonna come back for more</p>
+    </div>
+  </mat-card>
+
+  </div>
+
+</section>

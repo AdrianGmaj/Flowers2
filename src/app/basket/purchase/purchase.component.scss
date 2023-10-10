@@ -1,0 +1,56 @@
+.purchase{
+    display: grid;
+    grid-template-columns:
+        [container-start] 1fr [center-start] repeat(6,
+            [col-start] minmax(min-content, 25rem) [col-end]) [center-end] 1fr [container-end];
+
+
+
+
+    .toolbar {
+        grid-template-columns: container-start/conteinar-end;
+        height: 16rem;
+
+    }
+    &-content{
+        grid-column:container-start/conteinar-end ;
+        min-height: 80vh;
+        background: linear-gradient(to top, #ffefe982, #ffefe9dc),
+        url(https://grainy-gradients.vercel.app/noise.svg);
+        padding: 6vh 6vw;
+
+        h2{
+            text-transform: uppercase;
+            
+        }
+
+        mat-card{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            
+           
+        }
+
+        mat-form-field{
+            width: 100%;
+           
+        }
+
+        .form{
+            display: flex;
+            flex-direction: column;
+         justify-items: center;
+         align-items: center;
+         padding: 2vw;
+          
+            
+         
+        }
+        .photo{
+            background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5414057.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+        }
+    }
+}

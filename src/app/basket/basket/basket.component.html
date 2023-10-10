@@ -3,9 +3,13 @@
   <div class="basket">
     <div class="toolbar"></div>
     <div class="basket-container">
-    
+
       <div class="container">
-        <h2>your basket</h2>
+        <div class="header">
+          <h2>your basket</h2>
+          <i class="fa-solid fa-basket-shopping"></i>
+        </div>
+
         <table mat-table [dataSource]="basket" class="mat-elevation-z8">
 
 
@@ -35,7 +39,8 @@
           <!-- Symbol Column -->
           <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef> </th>
-            <td (click)="deleteProduct(element)" mat-cell *matCellDef="let element"> <button > <span class="material-symbols-outlined">
+            <td (click)="deleteProduct(element)" mat-cell *matCellDef="let element"> <button> <span
+                  class="material-symbols-outlined">
                   delete
                 </span> </button>
             </td>
@@ -52,6 +57,7 @@
         <div class="m-4" *ngIf="basketPrice">
           <h3 class="display-2"> total price: {{basketPrice}}$$</h3>
         </div>
+        <div class="pay"><a routerLink="/purchase"><i class="fa-regular fa-credit-card"></i> complete your purchase</a></div>
 
 
 
@@ -62,8 +68,8 @@
 
 
 <ng-template #emptyBasket class="mt-5">
- 
 
-    <app-basket-empty  ></app-basket-empty>
+
+  <app-basket-empty></app-basket-empty>
 
 </ng-template>

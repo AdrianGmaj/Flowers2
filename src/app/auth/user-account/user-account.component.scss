@@ -23,13 +23,13 @@
         grid-template-columns: 50% 50%;
 
         &_photo {
-            background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5409735.jpg");
-            background-size: cover;
-            background-position: center;
+        
             padding: 6vh 4vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            background: linear-gradient(to top, #ffefe982, #ffefe9dc),
+            url(https://grainy-gradients.vercel.app/noise.svg);
 
         }
 
@@ -43,11 +43,15 @@
             text-transform: uppercase;
             color: whitesmoke;
             padding: 3rem;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    
         }
 
         i {
             font-size: calc(3rem + 2vw), ;
             color: #ffda03;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    
         }
 
         p {
@@ -163,8 +167,10 @@
 
 
         &_history {
-            background: linear-gradient(to top, #ffefe982, #ffefe9dc),
-            url(https://grainy-gradients.vercel.app/noise.svg);
+            background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5409735.jpg");
+            background-size: cover;
+            background-position: center;
+  
             display: flex;
             flex-direction: column;
             justify-content: center;

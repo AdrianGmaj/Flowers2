@@ -6,17 +6,27 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { BasketComponent } from './basket/basket.component';
 import { BasketEmptyComponent } from './basket-empty/basket-empty.component';
+import { MatDivider, MatDividerModule } from '@angular/material/divider';
+import { PurchaseComponent } from './purchase/purchase.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInput, MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
   declarations: [BasketComponent,
-  BasketEmptyComponent],
+    BasketEmptyComponent, PurchaseComponent],
   imports: [
     CommonModule,
     BasketRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+MatInputModule,
+    MatFormFieldModule,
+    MatDividerModule,
+    MatCardModule
+
   ],
 })
 export class BasketModule { }
