@@ -79,4 +79,19 @@
             }
         }
     }
+    @media screen and (max-width: 500px) {
+        img{
+            height: 2rem;
+        }
+        .text-center {
+            width: 25rem;
+            
+        }
+        .cards_list{
+            gap: 1rem;
+            padding: calc(1rem + 0.5vw);
+        }
+        }
 }
+
+

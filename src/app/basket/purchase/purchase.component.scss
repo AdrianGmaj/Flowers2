@@ -1,4 +1,4 @@
-.purchase{
+.purchase {
     display: grid;
     grid-template-columns:
         [container-start] 1fr [center-start] repeat(6,
@@ -12,45 +12,67 @@
         height: 16rem;
 
     }
-    &-content{
-        grid-column:container-start/conteinar-end ;
+
+    &-content {
+        grid-column: container-start/conteinar-end;
         min-height: 80vh;
         background: linear-gradient(to top, #ffefe982, #ffefe9dc),
-        url(https://grainy-gradients.vercel.app/noise.svg);
+            url(https://grainy-gradients.vercel.app/noise.svg);
         padding: 6vh 6vw;
 
-        h2{
+        h2 {
             text-transform: uppercase;
-            
+
         }
 
-        mat-card{
+        mat-card {
             display: grid;
             grid-template-columns: 50% 50%;
-            
-           
+
+
         }
 
-        mat-form-field{
+        mat-form-field {
             width: 100%;
-           
+
         }
 
-        .form{
+        .form {
             display: flex;
             flex-direction: column;
-         justify-items: center;
-         align-items: center;
-         padding: 2vw;
-          
-            
-         
+            justify-items: center;
+            align-items: center;
+            padding: 2vw;
+
+
+
         }
-        .photo{
+
+        .photo {
             background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5414057.jpg");
             background-size: cover;
             background-position: center;
             width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            h2 {
+                font-size: calc(1rem + 3vw);
+                font-weight: 300;
+                color: whitesmoke;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+                padding: 2vh 1vw;
+            }
+
+            p {
+                font-size: calc(1.5rem + 1vw);
+                font-weight: 200;
+
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ import { OrderCreateRequest, OrderService } from 'src/app/services/order/order.s
 export class PurchaseComponent implements OnInit {
 
   order: OrderCreateRequest
-  basket:Basket = { products: [], price: 0 }
+  basket: Basket = { products: [], price: 0 }
 
   PurchaseData = new FormGroup({
     name: new FormControl('',
@@ -34,7 +34,7 @@ export class PurchaseComponent implements OnInit {
       [Validators.required,
       Validators.minLength(13),
       Validators.maxLength(16),
-     ]),
+      ]),
 
 
     expiration: new FormControl('',
@@ -54,13 +54,14 @@ export class PurchaseComponent implements OnInit {
     private basketService: BasketService) { }
 
   ngOnInit() {
+    this.basketService.getBasket().subscribe(bs => this.basket = bs)
   }
 
   buy() {
 
-    this.basketService.getBasket().subscribe(bs => this.basket = bs)
+   
 
-  
+
     let data = this.PurchaseData.getRawValue()
 
     this.order = {

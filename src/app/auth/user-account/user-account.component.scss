@@ -23,13 +23,13 @@
         grid-template-columns: 50% 50%;
 
         &_photo {
-        
+
             padding: 6vh 4vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
             background: linear-gradient(to top, #ffefe982, #ffefe9dc),
-            url(https://grainy-gradients.vercel.app/noise.svg);
+                url(https://grainy-gradients.vercel.app/noise.svg);
 
         }
 
@@ -44,14 +44,14 @@
             color: whitesmoke;
             padding: 3rem;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-    
+
         }
 
         i {
             font-size: calc(3rem + 2vw), ;
             color: #ffda03;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-    
+
         }
 
         p {
@@ -170,7 +170,7 @@
             background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5409735.jpg");
             background-size: cover;
             background-position: center;
-  
+
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -212,6 +212,13 @@
             .example-accordion-item-header,
             .example-accordion-item-body {
                 padding: 16px;
+                display: flex;
+                justify-content: space-evenly;
+
+                img {
+                    max-width: 5rem;
+                    max-height: 5rem;
+                }
             }
 
             .example-accordion-item-header:hover {
@@ -230,6 +237,15 @@
             }
 
         }
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .user-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: container-start/container-end;
 
     }
 }

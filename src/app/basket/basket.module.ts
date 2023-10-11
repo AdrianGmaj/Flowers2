@@ -11,6 +11,7 @@ import { PurchaseComponent } from './purchase/purchase.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -22,10 +23,11 @@ import { MatCardModule } from '@angular/material/card';
     FormsModule,
     ReactiveFormsModule,
     MatTableModule,
-MatInputModule,
+    MatInputModule,
     MatFormFieldModule,
     MatDividerModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
 
   ],
 })

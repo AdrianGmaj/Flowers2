@@ -10,6 +10,7 @@ import { UserAccountComponent } from './user-account/user-account.component';
 import { MatCardModule } from '@angular/material/card';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import { MatAccordion } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 
@@ -27,6 +28,7 @@ import { MatAccordion } from '@angular/material/expansion';
     MatInputModule,
     MatCardModule,
     CdkAccordionModule,
+    MatDividerModule
 
     
   ]

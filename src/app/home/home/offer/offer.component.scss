@@ -113,6 +113,16 @@
 
 
     }
+    @media screen and (max-width: 500px) {
+        padding: 2vh 2vw;
+        .offer_content{
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        }
+.offer_content-card{
+    width: 25rem;
+    height: 25rem;
+}
+        }
 }
 
 .offer_content-card-back {
