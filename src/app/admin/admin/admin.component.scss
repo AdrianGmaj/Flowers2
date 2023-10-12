@@ -58,6 +58,8 @@
             }
         }
        }
+
+  
     }
 
     @media screen and (max-width: 400px) {
@@ -66,5 +68,29 @@
             height: 13rem;
     
         }
+
+        ul{
+            visibility: hidden;
+        }
+
+
+       .side-bar_content{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    
+       }
+       .select{
+       justify-self: center;
+       }
     }
+    @media screen and (min-width: 400px) {
+     
+
+      
+
+
+      .select{
+     display:none;
+    }}
 }

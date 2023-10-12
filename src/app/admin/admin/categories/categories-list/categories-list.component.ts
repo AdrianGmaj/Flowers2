@@ -14,7 +14,7 @@ export class CategoriesListComponent implements OnInit {
 
 
   displayedColumns: string[] = [
-    'id',
+    
     'name',
     'active',
     'actions'

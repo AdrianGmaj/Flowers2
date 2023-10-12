@@ -5,6 +5,7 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin/admin.component';
 import { MeterialDesignModule } from '../meterial-design/meterial-design.module';
 import { FormsModule } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     AdminRoutingModule,
     MeterialDesignModule,
-    FormsModule
+    FormsModule,
+    MatSelectModule
+    
   ]
 })
 export class AdminModule { }
