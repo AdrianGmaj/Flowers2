@@ -5,10 +5,10 @@
 
     <div class="shop_container-sidenav">
       <div class="list-container">
-        <ul >
-          <li routerLinkActive="active"  routerLink="/shop/{{category.id}}"
+        <ul>
+          <li routerLinkActive="active" routerLink="/shop/{{category.id}}"
             *ngFor="let category of categories$ | async ">{{category.name}} <span></span></li>
-          <li  routerLink="/shop">all <span></span></li>
+          <li routerLink="/shop">all <span></span></li>
         </ul>
       </div>
     </div>

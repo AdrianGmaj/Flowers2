@@ -59,4 +59,12 @@
         }
        }
     }
+
+    @media screen and (max-width: 400px) {
+        .toolbar {
+            grid-template-columns: container-start/conteinar-end;
+            height: 13rem;
+    
+        }
+    }
 }

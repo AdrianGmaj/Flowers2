@@ -9,21 +9,21 @@ import { AuthService } from '../services/auth/auth.service';
 export class ToolbarComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
-
+  mobile: boolean
   ngOnInit() {
 
 
-}
+  }
 
-isSignedAsAdmin(){
-  return this.authService.isSignedAsAdmin()
- }
+  isSignedAsAdmin() {
+    return this.authService.isSignedAsAdmin()
+  }
 
- isSignedAsUser(){
-  return this.authService.isSignedAsUser()
- }
+  isSignedAsUser() {
+    return this.authService.isSignedAsUser()
+  }
 
- isSigned(){
-  return this.authService.isSigned()
- }
+  isSigned() {
+    return this.authService.isSigned()
+  }
 }

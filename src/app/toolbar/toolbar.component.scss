@@ -12,10 +12,7 @@
     z-index: 100;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 
-    #menu {
-        visibility: hidden;
-        color: black
-    }
+
 
     &_logo {
         justify-self: center;
@@ -36,14 +33,17 @@
     &_links {
         display: flex;
         justify-content: space-evenly;
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
 
-a{
-    display: flex;
-    flex-direction: row;
-}
+        a {
+            display: flex;
+            flex-direction: row;
+        }
 
 
-        a, i {
+        a,
+        i {
             font-size: calc(0.5rem + 0.5vw), ;
             background: none;
             color: black;
@@ -55,6 +55,7 @@ a{
             position: relative;
             overflow: hidden;
             transition: all 0.5s ease;
+           
 
 
 
@@ -72,7 +73,7 @@ a{
                 top: 0;
                 left: -100%;
                 width: 100%;
-                height: 0.6rem;
+                height: 0.2rem;
                 background: linear-gradient(90deg, transparent, #ffd6c7);
                 transition: 0.5s;
                 transition-delay: 1s;
@@ -81,7 +82,7 @@ a{
             span:nth-child(2) {
                 top: -100%;
                 right: 0;
-                width: 0.6rem;
+                width: 0.2rem;
                 height: 100%;
                 background: linear-gradient(180deg, transparent, #bcdae2);
                 transition: 0.5s;
@@ -92,7 +93,7 @@ a{
                 bottom: 0;
                 right: -100%;
                 width: 100%;
-                height: 0.6rem;
+                height: 0.2rem;
                 background: linear-gradient(270deg, transparent, #ffd6c7);
                 transition: 0.7s;
                 transition-delay: 0.25s;
@@ -101,7 +102,7 @@ a{
             span:nth-child(4) {
                 top: 100%;
                 left: 0%;
-                width: 0.6rem;
+                width: 0.2rem;
                 height: 100%;
                 background: linear-gradient(3600deg, transparent, #bcdae2);
                 transition: 0.5s;
@@ -114,7 +115,7 @@ a{
 
 
         a:hover {
-            border-width: 0.6rem;
+            border-width: 0.2rem;
             border-style: solid;
             border-image: linear-gradient(to right, #ffd6c7, #bcdae2)1;
             transition-delay: 1s;
@@ -159,7 +160,7 @@ a{
 
 @media screen and (max-width: 400px) {
     .nav {
-        height: 6rem;
+        height: 13rem;
 
         p {
             font-size: 2rem;
@@ -168,11 +169,37 @@ a{
         span {
             font-size: 2rem
         }
+
+        .nav_links {
+            visibility: hidden;
+        }
+        .sidenav {
+
+            justify-self: center;
+
+            span{
+                width: 20rem;
+            }
+          
+        }
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .nav {
+        height: 16rem;
+     
+
+
+        .sidenav {
+            visibility: hidden;
+   
+          
+        }
+
     }
 
-    #menu {
-        visibility: visible;
-    }
+
 
 
 }

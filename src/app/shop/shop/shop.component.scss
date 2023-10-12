@@ -91,6 +91,13 @@
             }
         }
     }
+    @media screen and (max-width: 400px) {
+        .toolbar {
+            grid-template-columns: container-start/conteinar-end;
+            height: 13rem;
+    
+        }
+    }
 }
 
 .shop_container-content {
@@ -106,3 +113,4 @@
     border-image: linear-gradient(to right, #ffd6c7, #bcdae2)1;
     transition-delay: 0.5s;
 }
+

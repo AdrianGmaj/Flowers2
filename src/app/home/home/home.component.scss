@@ -15,7 +15,7 @@
 
     .toolbar {
         grid-template-columns: container-start/conteinar-end;
-        height: 16rem;
+       
 
     }
 
@@ -65,7 +65,7 @@ app-why-us {
 @media screen and (max-width: 400px) {
     .toolbar {
         grid-template-columns: container-start/conteinar-end;
-        height: 5rem;
+        height: 13rem;
 
     }
 }

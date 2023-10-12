@@ -1,11 +1,11 @@
 .footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    
+
     position: relative;
-    background:  linear-gradient(to top, rgb(245, 245, 245), transparent),
-    url(https://grainy-gradients.vercel.app/noise.svg);
+    background: linear-gradient(to top, rgb(245, 245, 245), transparent),
+        url(https://grainy-gradients.vercel.app/noise.svg);
     border-top: 1rem solid whitesmoke;
 
     i {
@@ -13,34 +13,10 @@
         font-size: calc(1.2rem + 0.5vw), ;
     }
 
-    &-section-1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-transform: uppercase;
-        .contact-options{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
 
-            .telephone{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 1rem;
-            }
-            .email{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 1rem;
-            }
-        }
-    }
 
     &-section-2 {
+        padding: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -68,6 +44,33 @@
 
         i {
             padding: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+
+        .footer-section-1,
+        .footer-section-3 {
+            visibility: hidden;
+        }
+
+        .footer-section-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h3,
+            i {
+                font-size: 2rem;
+            }
+
+            p { font-size: 1rem;}
+
+        }
+
+        .footer {
+        visibility: hidden;
+         
         }
     }
 }
