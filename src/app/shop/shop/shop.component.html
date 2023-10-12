@@ -5,6 +5,17 @@
 
     <div class="shop_container-sidenav">
       <div class="list-container">
+        <mat-form-field class="select">
+          <mat-label>categories</mat-label>
+          <mat-select>
+            <mat-option routerLinkActive="active" routerLink="/shop/{{category.id}}"
+              *ngFor="let category of categories$ | async ">{{category.name}}>
+          
+            </mat-option>
+            <mat-option routerLink="/shop">all</mat-option>
+
+          </mat-select>
+        </mat-form-field>
         <ul>
           <li routerLinkActive="active" routerLink="/shop/{{category.id}}"
             *ngFor="let category of categories$ | async ">{{category.name}} <span></span></li>
@@ -12,6 +23,7 @@
         </ul>
       </div>
     </div>
+
 
     <div class="shop_container-content">
       <router-outlet></router-outlet>

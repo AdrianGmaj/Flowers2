@@ -5,6 +5,7 @@ import { ShopRoutingModule } from './shop-routing.module';
 import { ShopComponent } from './shop/shop.component';
 import { AllCategoriesComponent } from './shop/all-categories/all-categories.component';
 import { SelectedCategoryComponent } from './shop/selected-category/selected-category.component';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { SelectedCategoryComponent } from './shop/selected-category/selected-cat
   ],
   imports: [
     CommonModule,
-    ShopRoutingModule
+    ShopRoutingModule,
+    MatSelectModule
   ]
 })
 export class ShopModule { }
