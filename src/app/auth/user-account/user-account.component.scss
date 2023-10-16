@@ -239,13 +239,18 @@
         }
 
     }
-}
-
-@media screen and (max-width: 800px) {
-    .user-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-column: container-start/container-end;
-
+    @media screen and (max-width: 800px) {
+        .user-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column: container-start/container-end;
+    
+        }
+       
+    @media screen and (max-width: 400px) {
+  
+        .toolbar {
+            height: 13rem;}
     }
-}
+}}
+
