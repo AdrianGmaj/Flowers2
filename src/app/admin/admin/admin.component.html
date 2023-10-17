@@ -6,7 +6,7 @@
 <section class="side-bar">
 <div class="side-bar_content">
   <mat-form-field class="select">
-    <mat-label>categories</mat-label>
+    <mat-label>options</mat-label>  
     <mat-select>
       <mat-option routerLink="categories">
         categories
@@ -17,12 +17,17 @@
       <mat-option >
        newsletters
       </mat-option>
+      <mat-option style="background-color:  #ffda03;" (click)="signOut()" >
+       sign  out
+      </mat-option>
     </mat-select>
   </mat-form-field>
+
   <ul>
     <li routerLink="categories">categories</li>
     <li routerLink="products">products</li>
     <li>newsletters</li>
+    <li style="background-color:  #ffda03;" (click)="signOut()">sign out</li>
   </ul>
 </div>
 </section>
