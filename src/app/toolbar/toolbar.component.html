@@ -58,7 +58,11 @@
               routerLink="contact">contact</a>
           </li>
           <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="side-nav-button" mat-button routerLinkActive="active"
+            <a data-bs-dismiss="offcanvas" 
+            
+            
+
+            class="side-nav-button" mat-button routerLinkActive="active"
               routerLink="basket"><span
               class="material-symbols-outlined">
               shopping_basket
@@ -142,8 +146,9 @@
         </a>
       </ng-container>
     </li>
-    <li routerLinkActive="active">
-      <a routerLink="/basket"><i class="fa-solid fa-basket-shopping"></i>
+    <li [matBadge]="basket.products.length" matBadgePosition="after" MatBadgeSize='small'
+    matBadgeColor="accent" [matBadgeHidden]="basket.products.length == 0" routerLinkActive="active">
+      <a  routerLink="/basket"><i class="fa-solid fa-basket-shopping"></i>
         <span></span>
         <span></span>
         <span></span>

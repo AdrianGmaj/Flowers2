@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth/auth.service';
+import { BasketService } from '../services/basket/basket.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,10 +8,15 @@ import { AuthService } from '../services/auth/auth.service';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
+basket
+  constructor(private authService: AuthService,
+    private basketService: BasketService) { }
 
-  constructor(private authService: AuthService) { }
-  mobile: boolean
   ngOnInit() {
+
+    this.basketService.getBasket().subscribe((response)=>{
+      this.basket = response
+          })
 
 
   }

@@ -7,6 +7,7 @@ import { ShowcaseComponent } from './home/showcase/showcase.component';
 import { OfferComponent } from './home/offer/offer.component';
 import { NewsletterComponent } from './home/newsletter/newsletter.component';
 import { WhyUsComponent } from './home/why-us/why-us.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,13 +20,14 @@ import { WhyUsComponent } from './home/why-us/why-us.component';
     OfferComponent,
     NewsletterComponent,
     WhyUsComponent,
-   
-   
-  
+
+
+
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeModule { }

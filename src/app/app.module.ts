@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
 import { AuthService } from './services/auth/auth.service';
 import { BasketModule } from './basket/basket.module';
+import { MatBadgeModule } from '@angular/material/badge';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { BasketModule } from './basket/basket.module';
     FormsModule,
     AuthModule,
     BasketModule,
+    MatBadgeModule
     
 
   ],

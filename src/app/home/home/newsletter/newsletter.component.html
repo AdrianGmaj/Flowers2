@@ -2,6 +2,7 @@
   <h2 class="newsletter_title">Join to our newsletter</h2>
   <p class="newsletter_para">let us tell you a beautiful story about flowers</p>
   <div class="newsletter_content">
+    <form (ngSubmit)="onSubmit()" [formGroup]="NewsletterForm"></form>
     <input class="newsletter_content-input" type="email" placeholder="enter your email">
     <a href="">submit</a>
   </div>
