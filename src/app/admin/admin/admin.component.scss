@@ -62,6 +62,13 @@
   
     }
 
+    .active {
+        border-bottom: 0.1rem solid;
+            
+        border-image: linear-gradient(to right, #ffd6c7, #bcdae2)1;
+        padding: 2rem;
+    }
+    
     @media screen and (max-width: 400px) {
         .toolbar {
             grid-template-columns: container-start/conteinar-end;

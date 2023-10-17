@@ -114,11 +114,12 @@
 
 
 
-        a:hover {
-            border-width: 0.2rem;
-            border-style: solid;
+   
+
+        .active{
+            border-bottom: 0.1rem solid;
+            
             border-image: linear-gradient(to right, #ffd6c7, #bcdae2)1;
-            transition-delay: 1s;
         }
 
 

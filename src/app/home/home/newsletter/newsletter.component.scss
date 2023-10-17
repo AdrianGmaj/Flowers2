@@ -64,16 +64,17 @@
         .newsletter_content-input:focus {
             outline: none;
         }
+
         input::placeholder {
-            color:whitesmoke;
+            color: whitesmoke;
             text-transform: uppercase;
             font-size: 2vh;
             letter-spacing: 0.5rem;
             font-weight: 200;
-           }
-         
+        }
 
-        a {
+
+        button {
             align-self: center;
             padding: 1rem;
             background-color: whitesmoke;
@@ -91,10 +92,11 @@
             text-align: center;
             transition: all 1s ease-in-out;
             z-index: 1;
+            border: none;
 
         }
 
-        a::before {
+        button::before {
             content: "";
             color: #05a081;
             background-color: whitesmoke;
@@ -113,14 +115,35 @@
             transition: all 0.5s ease-in-out;
         }
 
-        a:hover::before {
+        button:hover::before {
             transform: scale(1);
         }
 
-        a:hover {
+        button[disabled]:hover::before {
+            transform: scale(0);
+        }
+
+        button[disabled]:hover {
+
+            color: #05a081;
+            
+
+        }
+
+        button:hover:not([disabled]) {
             color: white;
             // background-color:#05a081 ;
             border: 0.2rem solid whitesmoke;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        mat-error {
+            align-self: center;
         }
     }
 }

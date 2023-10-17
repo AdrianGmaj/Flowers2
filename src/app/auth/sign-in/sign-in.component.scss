@@ -133,8 +133,18 @@
         button:hover::before {
             transform: scale(1);
         }
+        button[disabled]:hover::before {
+            transform: scale(0);
+        }
 
-        button:hover {
+        button[disabled]:hover {
+
+            color: #05a081;
+            
+
+        }
+
+        button:hover:not([disabled]) {
             color: white;
             // background-color:#05a081 ;
             border: 0.2rem solid whitesmoke;

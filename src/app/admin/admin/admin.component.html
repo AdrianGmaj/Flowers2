@@ -8,13 +8,13 @@
   <mat-form-field class="select">
     <mat-label>options</mat-label>  
     <mat-select>
-      <mat-option routerLink="categories">
+      <mat-option routerLinkActive="active" routerLink="categories">
         categories
       </mat-option>
-      <mat-option routerLink="products">
+      <mat-option routerLinkActive="active" routerLink="products">
         products
       </mat-option>
-      <mat-option >
+      <mat-option  >
        newsletters
       </mat-option>
       <mat-option style="background-color:  #ffda03;" (click)="signOut()" >
@@ -24,10 +24,10 @@
   </mat-form-field>
 
   <ul>
-    <li routerLink="categories">categories</li>
-    <li routerLink="products">products</li>
-    <li>newsletters</li>
-    <li style="background-color:  #ffda03;" (click)="signOut()">sign out</li>
+    <li routerLinkActive="active" routerLink="categories">categories</li>
+    <li routerLinkActive="active" routerLink="products">products</li>
+    <li routerLinkActive="active" routerLink="newsletters">newsletters</li>
+    <li routerLinkActive="active" style="background-color:  #ffda03;" (click)="signOut()">sign out</li>
   </ul>
 </div>
 </section>

@@ -10,10 +10,11 @@ import { NewsletterService } from 'src/app/services/newsletter/newsletter.servic
 export class NewsletterComponent implements OnInit {
 
   NewsletterForm = new FormGroup({
+
     email: new FormControl('',
       [Validators.required,
       Validators.email,
-      ])
+      ],)
 
   })
 

@@ -8,6 +8,7 @@ import { OfferComponent } from './home/offer/offer.component';
 import { NewsletterComponent } from './home/newsletter/newsletter.component';
 import { WhyUsComponent } from './home/why-us/why-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInput, MatInputModule } from '@angular/material/input';
 
 
 
@@ -27,7 +28,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule,
+
   ]
 })
 export class HomeModule { }

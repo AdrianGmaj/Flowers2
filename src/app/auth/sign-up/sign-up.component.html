@@ -8,18 +8,18 @@
 
     <form (ngSubmit)="onSubmit()" action="" [formGroup]="SignUpForm">
       <input formControlName="email" type="email" placeholder="email">
-      <mat-error style="color:#ffda03"  *ngIf="SignUpForm.get('email').hasError('required')">
+      <mat-error style="color:whitesmoke"   *ngIf="SignUpForm.get('email').hasError('required')">
         email required
         </mat-error>
-        <mat-error  style="color:#ffda03" *ngIf="SignUpForm.get('email').hasError('email')">
+        <mat-error  style="color:whitesmoke"  *ngIf="SignUpForm.get('email').hasError('email')">
         enter valid email
         </mat-error>
       <input formControlName="password" type="password" placeholder="password">
-      <mat-error style="color:#ffda03;" *ngIf=" SignUpForm.get('password').hasError('required')">
+      <mat-error style="color:whitesmoke"  *ngIf=" SignUpForm.get('password').hasError('required')">
         password requaired
       </mat-error>
       <input formControlName="passwordConfirmation" type="password" placeholder="confirm password">
-      <mat-error style="color:#ffda03;" *ngIf=" SignUpForm.get('passwordConfirmation').hasError('required')">
+      <mat-error style="color:whitesmoke"  *ngIf=" SignUpForm.get('passwordConfirmation').hasError('required')">
         password requaired
       </mat-error>
       <button type="submit">sing in</button>
