@@ -145,7 +145,7 @@ justify-content: space-evenly;
     .content_form-card-3-items{
         padding: 3rem;
     }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 500px) {
         .toolbar {
             grid-template-columns: container-start/conteinar-end;
             height: 13rem;

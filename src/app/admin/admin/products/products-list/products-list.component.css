@@ -3,7 +3,7 @@
     min-height: 100vh;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .list{
         padding: 0.2rem;
       max-width: 100vw;
