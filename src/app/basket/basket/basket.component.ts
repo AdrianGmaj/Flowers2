@@ -39,4 +39,12 @@ export class BasketComponent implements OnInit {
     this.basketService.deleteProduct(product);
   }
 
+  isSigned() {
+    return this.authService.isSigned()
+  }
+
+  navigate() {
+    return this.router.navigateByUrl('purchase')
+  }
+
 }
