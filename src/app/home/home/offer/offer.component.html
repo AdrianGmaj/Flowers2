@@ -4,70 +4,20 @@
   </h2>
   <div class="offer_content">
 
-    <div class="offer_content-card">
-      <!-- front -->
+    <!-- <div class="offer_content-card">
+  
       <div class="offer_content-card-front"></div>
-      <!-- back -->
+  
       <div class="offer_content-card-back">
         <h4>rose</h4>
-        <p>A rose is either a woody perennial flowering plant of the genus Rosa in the family Rosaceae or the flower it bears.
+        <p>A rose is either a woody perennial flowering plant of the genus Rosa in the family Rosaceae or the flower it
+          bears.
         </p>
       </div>
-    </div>
+    </div> -->
 
-    <div class="offer_content-card">
-      <!-- front -->
-      <div class="offer_content-card-front"></div>
-      <!-- back -->
-      <div class="offer_content-card-back">
-        <h4>dahlia</h4>
-        <p>Dahlias are perennial plants with tuberous roots, though they are grown as annuals in some regions with cold winters.
-        </p>
-      </div>
-    </div>
-
-    <div class="offer_content-card">
-      <!-- front -->
-      <div class="offer_content-card-front"></div>
-      <!-- back -->
-      <div class="offer_content-card-back">
-        <h4>orchid</h4>
-        <p>Orchids are plants that belong to the family Orchidaceae a diverse and widespread group of flowering plants with blooms that are often colourful 
-        </p>
-      </div>
-    </div>
-
-    <div class="offer_content-card">
-      <!-- front -->
-      <div class="offer_content-card-front"></div>
-      <!-- back -->
-      <div class="offer_content-card-back">
-        <h4>peony</h4>
-        <p>The peony or paeony is a flowering plant in the genus Paeonia the only genus in the family Paeoniaceae . Peonies are native to Asia
-        </p>
-      </div>
-    </div>
-
-    <div class="offer_content-card">
-      <!-- front -->
-      <div class="offer_content-card-front"></div>
-      <!-- back -->
-      <div class="offer_content-card-back">
-        <h4>pink roses</h4>
-        <p>Pink roses are a symbol of tenderness. This bouquet of 15 pink flowers is the perfect choice when you want to express your feelings
-        </p>
-      </div>
-    </div>
-
-    <div class="offer_content-card">
-      <!-- front -->
-      <div class="offer_content-card-front"></div>
-      <!-- back -->
-      <div class="offer_content-card-back">
-        <h4>sunflower</h4>
-        <p>The common sunflower (Helianthus annuus) is a species of large annual forb of the genus Helianthus. It is commonly grown as a crop for its edible oily seeds
-        </p>
-      </div>
+    <div *ngFor="let card of cards">
+      <app-card [cards]="card"></app-card>
     </div>
 
 

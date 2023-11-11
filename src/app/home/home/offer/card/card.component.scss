@@ -1,33 +1,6 @@
-::ng-deep  .offer {
-    display: grid;
-    // grid-template-rows: 2 1fr;
-    row-gap: 3vh;
-    padding: 6vh 3vw;
-    margin-bottom: 1vh;
-
-    &_title {
-        font-size: calc(1.5rem + 4vw);
-        text-align: center;
-        margin-top: 2rem;
-        padding: 4rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        position: relative;
-    }
+.offer {
 
 
-    &_title:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 20%;
-        width: 60%;
-
-        height: 0.5rem;
-        background: linear-gradient(to right, #07a98881, transparent),
-            url(https://grainy-gradients.vercel.app/noise.svg);
-        justify-self: center;
-    }
 
     &_content {
         display: grid;
@@ -77,37 +50,37 @@
             text-transform: uppercase;
         }
 
-        &-card:first-child &-card-front {
+        &-card-1 &-card-front {
             background: url("/assets/roses.jpg");
             background-size: cover;
             background-position: center;
         }
 
-        &-card:nth-child(2) &-card-front {
+        &-card-2 &-card-front {
             background: url("/assets/dahlia1.jpg");
             background-size: cover;
             background-position: center;
         }
 
-        &-card:nth-child(3) &-card-front {
+        &-card-3 &-card-front {
             background: url("/assets/orchid1.jpg");
             background-size: cover;
             background-position: center;
         }
 
-        &-card:nth-child(4) &-card-front {
+        &-card-4 &-card-front {
             background: url("/assets/peony1.jpg");
             background-size: cover;
             background-position: center;
         }
 
-        &-card:nth-child(5) &-card-front {
+        &-card-5 &-card-front {
             background: url("/assets/pink-roses.jpg");
             background-size: cover;
             background-position: center;
         }
 
-        &-card:nth-child(6) &-card-front {
+        &-card-6 &-card-front {
             background: url("/assets/sunflower1.jpg");
             background-size: cover;
             background-position: center;
@@ -139,35 +112,37 @@
 
 }
 
-.offer_content-card:first-child:hover .offer_content-card-back {
+.offer_content-card-1:hover .offer_content-card-back {
     transform: perspective(100rem) rotateY(1turn);
     background-color: #c21e56
 }
 
-.offer_content-card:nth-child(2):hover .offer_content-card-back {
+.offer_content-card-2:hover .offer_content-card-back {
     transform: perspective(100rem) rotateY(1turn);
     background-color: #dbc8ab
 }
 
-.offer_content-card:nth-child(3):hover .offer_content-card-back {
+.offer_content-card-3:hover .offer_content-card-back {
     transform: perspective(100rem) rotateY(1turn);
     background-color: #f1ebd9
 }
 
-.offer_content-card:nth-child(6):hover .offer_content-card-back {
+.offer_content-card-4:hover .offer_content-card-back {
     transform: perspective(100rem) rotateY(1turn);
+    background-color: #f3c9d5;
+
+}
+
+.offer_content-card-5:hover .offer_content-card-back {
+    transform: perspective(100rem) rotateY(1turn);
+    background-color: #f3638c;
+
+}
+
+.offer_content-card-6:hover .offer_content-card-back {
+    transform: perspective(100rem) rotateY(1turn);
+
     background-color: #ffda03;
 
-}
-
-.offer_content-card:nth-child(5):hover .offer_content-card-back {
-    transform: perspective(100rem) rotateY(1turn);
-    background-color: #f3c9d5;
-
-}
-
-.offer_content-card:nth-child(4):hover .offer_content-card-back {
-    transform: perspective(100rem) rotateY(1turn);
-    background-color: #f3c9d5;
 
 }
