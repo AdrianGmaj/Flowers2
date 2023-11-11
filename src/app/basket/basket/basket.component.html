@@ -58,7 +58,7 @@
           <h3 class="display-2"> total price: {{basketPrice}}$$</h3>
         </div>
         <div *ngIf="isSigned()" class="pay"><a routerLink="/purchase"><i class="fa-regular fa-credit-card"></i> complete your purchase</a></div>
-        <div *ngIf="!isSigned()" class="pay" ><a routerLink="/purchase"><i class="fa-regular fa-credit-card"></i>  To purchase your products, please log in here </a></div>
+        <div *ngIf="!isSigned()" class="pay" ><a routerLink="/sign-in"><i class="fa-regular fa-credit-card"></i>  To purchase your products, please log in here </a></div>
 
 
 

@@ -1,7 +1,8 @@
 <div class="cards">
   <ul class="cards_list">
     <li  *ngFor="let product of products$ | async">
-      <div class="card text-center" >
+      <app-card [product]="product" (buyProduct)="addProduct($event)"></app-card>
+      <!-- <div class="card text-center" >
         <img src="{{product.image}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{product.name}}</h5>
@@ -9,7 +10,7 @@
           <p class="card-text">{{product.description}}</p>
           <a  (click)="addProduct(product)" >add to basket</a>
         </div>
-      </div>
+      </div> -->
     </li>
   </ul>
   </div>

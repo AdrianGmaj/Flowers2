@@ -1,0 +1,81 @@
+.text-center {
+    width: 40rem;
+    
+}
+
+
+    img {
+
+        height: 30rem;
+        object-fit: cover;
+
+        vertical-align: middle;
+    }
+
+    a {
+
+
+        padding: 0.5rem;
+        background-color: whitesmoke;
+        background: linear-gradient(to top, whitesmoke, transparent),
+            url(https://grainy-gradients.vercel.app/noise.svg);
+        color: yellow;
+        text-transform: uppercase;
+        margin-top: 2rem;
+        font-weight: 700;
+        font-size: 2rem;
+        border-radius: 0.2rem;
+        
+        margin-top: 4rem;
+        position: relative;
+        text-align: center;
+        transition: all 1s ease-in-out;
+        z-index: 1;
+        margin: 1rem;
+        cursor: pointer;
+
+
+    }
+    a::before {
+        content: "";
+        color: #05a081;
+        background-color: whitesmoke;
+        transform: scale(2rem);
+        position: absolute;
+
+        top: 0;
+
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #05a081;
+        border-radius: inherit;
+        z-index: -1;
+        transform: scale(0);
+        transition: all 0.5s ease-in-out;
+    }
+
+    a:hover::before {
+        transform: scale(1);
+    }
+
+    a:hover {
+        color: white;
+        background-color:#05a081 ;
+        border: 0.2rem solid whitesmoke;
+    }
+
+
+@media screen and (max-width: 500px) {
+img{
+    height: 2rem;
+}
+.text-center {
+    width: 25rem;
+    
+}
+.cards_list{
+    gap: 1rem;
+    padding: calc(1rem + 0.5vw);
+}
+}

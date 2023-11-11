@@ -10,9 +10,9 @@
       <mat-error  style="color:whitesmoke" *ngIf="NewsletterForm.get('email').hasError('email')">
       enter valid email
       </mat-error>
-     
+      <button type="submit" [disabled]="NewsletterForm.invalid">submit</button>
   </form>
-  <button type="submit" [disabled]="NewsletterForm.invalid">submit</button>
+
 
   </div>
 </section>

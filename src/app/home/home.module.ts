@@ -30,6 +30,7 @@ import { MatInput, MatInputModule } from '@angular/material/input';
     HomeRoutingModule,
     ReactiveFormsModule,
     MatInputModule,
+    FormsModule
 
   ]
 })

@@ -1,0 +1,9 @@
+<div class="card text-center" >
+  <img src="{{product.image}}" class="card-img-top " alt="card-image">
+  <div class="card-body">
+    <h3 class="card-title p-2">{{product.name | uppercase}}</h3>
+    <h5 class="card-title p-2">{{product.price}}$</h5>
+    <p class="card-text p-4">{{product.description}}</p>
+    <a  (click)="addProduct(product)"  >add to basket</a>
+  </div>
+</div>

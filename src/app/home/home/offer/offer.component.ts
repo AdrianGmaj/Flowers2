@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./offer.component.scss']
 })
 export class OfferComponent implements OnInit {
-
+// data array*
+// input tych danych do mniejszych komponentow
   constructor() { }
 
   ngOnInit() {

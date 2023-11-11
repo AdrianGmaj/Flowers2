@@ -24,6 +24,7 @@ export class NewsletterComponent implements OnInit {
   }
 
   onSubmit() {
+ 
     this.newsletterService.addNewsletter(this.NewsletterForm.getRawValue()).subscribe({
       next: response => {
         console.log('addNewsletter response', response)
