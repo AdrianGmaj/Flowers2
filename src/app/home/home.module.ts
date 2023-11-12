@@ -10,6 +10,7 @@ import { WhyUsComponent } from './home/why-us/why-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { CardComponent } from './home/offer/card/card.component';
+import { WhyUsCardComponent } from './home/why-us/why-us-card/why-us-card.component';
 
 
 
@@ -23,8 +24,9 @@ import { CardComponent } from './home/offer/card/card.component';
     OfferComponent,
     NewsletterComponent,
     WhyUsComponent,
-    CardComponent
-   
+    CardComponent,
+    WhyUsCardComponent
+
 
 
 

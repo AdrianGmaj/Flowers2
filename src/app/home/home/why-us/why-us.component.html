@@ -3,6 +3,12 @@
   <h2>becouse we are:</h2>
   <div class="why-us_content">
 
+    
+    <div *ngFor="let whyUsCard of whyUsCards">
+      <app-why-us-card [card]="whyUsCard"></app-why-us-card>
+    </div>
+
+    <!-- 
     <div class="why-us_content-card">
       <span class="material-symbols-outlined">
         outdoor_garden
@@ -12,6 +18,7 @@
         nesciunt rem!
       </p>
     </div>
+
     <div class="why-us_content-card">
       <span class="material-symbols-outlined">
         diversity_1
@@ -21,6 +28,7 @@
         nesciunt rem!
       </p>
     </div>
+
     <div class="why-us_content-card">
       <span class="material-symbols-outlined">
         compost
@@ -29,6 +37,7 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero in esse, optio atque quod numquam placeat
         nesciunt rem!
       </p>
-    </div>
+    </div> -->
+
   </div>
 </section>
