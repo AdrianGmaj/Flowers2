@@ -35,21 +35,21 @@ export class SignInComponent implements OnInit {
     this.authService.signIn(this.SignInForm.getRawValue())
       .subscribe({
 
-       next: (response) => {
-        if (response.success) {
-          if (response.role === 1) {
-            this.router.navigateByUrl('user')
+        next: (response) => {
+          if (response.success) {
+            if (response.role === 1) {
+              this.router.navigateByUrl('user')
+            }
+            else if (response.role === 2) {
+              this.router.navigateByUrl('admin')
+            }
           }
-          else if (response.role === 2) {
-            this.router.navigateByUrl('admin')
-          }
+        },
+        error: (errorResponse: HttpErrorResponse) => {
+          this.SignInForm.setErrors({
+            credentials: errorResponse.error.message
+          })
         }
-      },
-    error: (errorResponse: HttpErrorResponse) => {
-      this.SignInForm.setErrors({
-        credentials: errorResponse.error.message
       })
-    }
-    })
   }
 }
