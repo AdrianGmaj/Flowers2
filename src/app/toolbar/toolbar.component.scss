@@ -1,5 +1,6 @@
-.nav {
 
+.nav {
+z-index: 200000;
     width: 100%;
   
     display: flex;
@@ -7,26 +8,38 @@
     justify-content: space-evenly;
     position: fixed;
     text-transform: uppercase;
-    background-color: rgb(245, 245, 245);
+    // background-color: rgb(245, 245, 245);
     overflow: hidden;
     z-index: 100;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    &.scrolled {
+        background-color:  #00664e;
+        // background-color:  #0ea786;
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.66);
+        transition: all 0.5s ease-in-out;
+    }
+
 
 
 
     &_logo {
         justify-self: center;
+        align-self: center;
 
 
         span {
             padding: 1rem;
-            color: black;
-            font-size: calc(1rem + 1vw)
+            color: white;
+            font-size: 2.5rem;
+           
         }
 
         p {
-            color: black;
-            font-size: calc(1rem + 1vw)
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 900;;
         }
     }
 
@@ -34,6 +47,9 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        gap: 5rem;
+        font-weight: 900;
+        
 
 
         a {
@@ -44,9 +60,12 @@
 
         a,
         i {
-            font-size: calc(0.5rem + 0.5vw), ;
+            width: 100%;
+         
+            font-size:1.5rem ;
+            font-weight: 600;
             background: none;
-            color: black;
+            color: white;
             display: block;
 
 
@@ -208,7 +227,7 @@
 
 @media screen and (min-width: 500px) {
     .nav {
-        height: 5.6rem;
+        height: 6rem;
 
 
 

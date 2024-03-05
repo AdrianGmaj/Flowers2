@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth/auth.service';
 import { BasketService } from '../services/basket/basket.service';
 
@@ -18,6 +18,18 @@ basket
       this.basket = response
           })
 
+
+  }
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    let element = document.querySelector('.nav') as HTMLElement;
+
+
+      if (window.scrollY > element.clientHeight * 3) {
+        element.classList.add('scrolled');
+      } else {
+        element.classList.remove('scrolled');
+      }
 
   }
 
