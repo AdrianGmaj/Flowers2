@@ -1,26 +1,29 @@
 <section class="sign-in">
   <div class="toolbar"></div>
-  <div class="sign-in_content">
-    <div class="sign-in_content-header">
-      <h3>sign in <i class="fa-solid fa-user"></i></h3>
-      <p>to complete your order and see your purchase history</p>
-    </div>
 
+  <div class="sign-in_content">
+
+  
+    <h3>sign in <i class="fa-solid fa-user"></i></h3>
     <form (ngSubmit)="onSubmit()" action="" [formGroup]="SignInForm">
       <input formControlName="email" type="email" placeholder="email">
       <mat-error style="color:whitesmoke"  *ngIf="SignInForm.get('email').hasError('required')">
-        email required
+        email required*
         </mat-error>
         <mat-error  style="color:whitesmoke" *ngIf="SignInForm.get('email').hasError('email')">
         enter valid email
         </mat-error>
       <input formControlName="password" type="password" placeholder="password">
       <mat-error style="color:whitesmoke"  *ngIf=" SignInForm.get('password').hasError('required')">
-        password requaired
+        password requaired*
       </mat-error>
-      <button [disabled]="SignInForm.invalid">log in</button>
+      <div class="buttons">
+        <button [disabled]="SignInForm.invalid">log in</button>
+        <button class="register" routerLink="/sign-up" >register</button>
+      </div>
+ 
     </form>
-
-    <a routerLink="/sign-up">if you dont have account you can register here</a>
+  
+ 
   </div>
 </section>
