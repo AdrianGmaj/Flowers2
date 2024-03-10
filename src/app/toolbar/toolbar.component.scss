@@ -1,8 +1,7 @@
-
 .nav {
-z-index: 200000;
+    z-index: 200000;
     width: 100%;
-  
+
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -11,14 +10,25 @@ z-index: 200000;
     // background-color: rgb(245, 245, 245);
     overflow: hidden;
     z-index: 100;
-  
+
     font-family: "Nunito", sans-serif;
     font-weight: 900;
+
+    i {
+        color: white;
+        cursor: pointer;
+    }
+
     &.scrolled {
-        background-color:  #00664e;
+        background-color: #00664e;
+        // background-color: #198078;
         // background-color:  #0ea786;
-          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.66);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.66);
         transition: all 0.5s ease-in-out;
+    }
+
+    &.background {
+        background-color: #00664e;
     }
 
 
@@ -33,13 +43,14 @@ z-index: 200000;
             padding: 1rem;
             color: white;
             font-size: 2.5rem;
-           
+
         }
 
         p {
             color: white;
             font-size: 2.5rem;
-            font-weight: 900;;
+            font-weight: 900;
+            ;
         }
     }
 
@@ -49,7 +60,7 @@ z-index: 200000;
         align-items: center;
         gap: 5rem;
         font-weight: 900;
-        
+
 
 
         a {
@@ -61,8 +72,8 @@ z-index: 200000;
         a,
         i {
             width: 100%;
-         
-            font-size:1.5rem ;
+
+            font-size: 1.5rem;
             font-weight: 600;
             background: none;
             color: white;
@@ -133,7 +144,10 @@ z-index: 200000;
 
 
 
-
+        .mat-badge-content {
+            background-color: #fbae3c;
+            color: #00664e;
+        }
 
         .active {
             border-bottom: 0.1rem solid;
@@ -173,14 +187,84 @@ z-index: 200000;
 
     }
 
+    .nav_side {
+        transition: all 0.5s ease-in-out;
+        position: fixed;
+        width: 100%;
+        height: 60vh;
+        top: -100vh;
+        left: 0;
+        background-color: #00664e;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.66);
 
+        z-index: 99;
+
+        .fa-xmark {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 2rem 2rem;
+            cursor: pointer;
+            color: #fbae3c;
+            font-size: 2.5rem;
+        }
+
+        &.active {
+            top: 0;
+
+        }
+
+        ul {
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            gap: 2rem;
+
+            li {
+                color: white;
+                cursor: pointer;
+
+                i {
+                    color: white;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        .bar {
+            width: 40%;
+            height: 2px;
+            background-color: #fbae3c;
+            bottom: 20%;
+            justify-self: flex-end;
+        }
+
+    }
+
+    #offcanvasNavbar {
+        background-color: #00664e;
+    }
 }
 
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
     .nav {
-        height: 13rem;
+        height: 7rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
 
         p {
             font-size: 2rem;
@@ -196,12 +280,16 @@ z-index: 200000;
 
         .sidenav {
 
-            justify-self: center;
 
             span {
-                width: 20rem;
+
+                font-size: 3rem;
             }
 
+        }
+
+        .hamburger {
+            visibility: visible;
         }
     }
 
@@ -221,15 +309,19 @@ z-index: 200000;
     }
 
     .material-symbols-outlined {
-        color: black;
+        color: white;
+        padding: 2rem;
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 800px) {
     .nav {
         height: 6rem;
 
+        .hamburger {
+            visibility: hidden;
 
+        }
 
         .sidenav {
             visibility: hidden;

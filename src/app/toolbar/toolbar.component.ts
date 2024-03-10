@@ -1,6 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth/auth.service';
 import { BasketService } from '../services/basket/basket.service';
+import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,15 +10,18 @@ import { BasketService } from '../services/basket/basket.service';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-basket
+  basket;
+  sideOpen = false;
   constructor(private authService: AuthService,
-    private basketService: BasketService) { }
+    private basketService: BasketService,
+    private router: Router,
+    private dialog: MatDialog,) { }
 
   ngOnInit() {
 
-    this.basketService.getBasket().subscribe((response)=>{
+    this.basketService.getBasket().subscribe((response) => {
       this.basket = response
-          })
+    })
 
 
   }
@@ -25,11 +30,11 @@ basket
     let element = document.querySelector('.nav') as HTMLElement;
 
 
-      if (window.scrollY > element.clientHeight * 3) {
-        element.classList.add('scrolled');
-      } else {
-        element.classList.remove('scrolled');
-      }
+    if (window.scrollY > element.clientHeight * 1) {
+      element.classList.add('scrolled');
+    } else {
+      element.classList.remove('scrolled');
+    }
 
   }
 
@@ -44,4 +49,13 @@ basket
   isSigned() {
     return this.authService.isSigned()
   }
+  showSide(){
+    if(this.sideOpen == false){
+      this.sideOpen = true;
+    }else{
+      this.sideOpen = false
+    }
+    
+      }
+
 }

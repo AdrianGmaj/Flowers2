@@ -1,5 +1,5 @@
 <nav class="nav">
-  <a href="" class="nav_logo">
+  <a routerLink="" fragment="home" class="nav_logo">
 
     <p>Flowers<span class="material-symbols-outlined">
         emoji_nature
@@ -7,90 +7,54 @@
 
   </a>
 
-
-
-  <!-- sidenav button -->
-
-  <div class="sidenav">
-    <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
-      <span class="material-symbols-outlined">
-        menu
-      </span>
-    </button>
-    <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasNavbar"
-      aria-labelledby="offcanvasDarkNavbarLabel">
-      <div class="offcanvas-header">
-
-        <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <span (click)="showSide()" class="hamburger"><i class="fa-solid fa-bars"></i></span>
 
 
 
-        <ng-container *ngIf="isSignedAsUser()">
-          <a class="m-3" data-bs-dismiss="offcanvas" mat-button routerLinkActive="active" routerLink="user"><span
-              class="material-symbols-outlined" data-bs-dismiss="offcanvas">
-              person
-            </span></a>
-        </ng-container>
 
-        <ng-container *ngIf="!isSigned()">
-          <a class="m-3" data-bs-dismiss="offcanvas" mat-button routerLinkActive="active" routerLink="sign-in"><span
-              class="material-symbols-outlined">
-              person
-            </span></a>
-        </ng-container>
-      
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+  <div [class.active]="sideOpen" class="nav_side active">
+    <i (click)="showSide()" class="fa-solid fa-xmark"></i>
+    <ul>
+      <li (click)="showSide()" class="nav_side-link" routerLink="" fragment="home"> home
+        <span></span>
+      </li>
+      <li (click)="showSide()" class="nav_side-link" routerLink="/shop">shop
+        <span></span>
+      </li>
 
-          <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="side-nav-button" mat-button routerLinkActive="active"
-              routerLink="home">home</a>
-          </li>
-          <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="side-nav-button" mat-button routerLinkActive="active"
-              routerLink="shop">shop</a>
-          </li>
+      <li (click)="showSide()" class="nav_side-link" routerLink="" fragment="contact">contact
 
+        <span></span>
+      </li>
+      <li (click)="showSide()" class="nav_side-link" *ngIf="isSignedAsAdmin()" routerLink="/admin">admin
 
-          <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" class="side-nav-button" mat-button routerLinkActive="active"
-              routerLink="contact">contact</a>
-          </li>
-          <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" 
-            
-            
+        <span></span>
+      </li>
+      <li (click)="showSide()" *ngIf="!isSigned()" class="nav_side-link" routerLink="/sign-in"><i
+          class="fa-solid fa-user"></i>
 
-            class="side-nav-button" mat-button routerLinkActive="active"
-              routerLink="basket"><span
-              class="material-symbols-outlined">
-              shopping_basket
-            </span></a>
-          </li>
+        <span></span>
+      </li>
+      <li (click)="showSide()" *ngIf="isSignedAsUser()" class="nav_side-link" routerLink="/user"><i
+          class="fa-solid fa-user"></i>
 
-          <li class="nav-item">
-            <a data-bs-dismiss="offcanvas" *ngIf="isSignedAsAdmin()" class="side-nav-button" mat-button
-              routerLinkActive="active" routerLink="admin">admin</a>
-          </li>
+        <span></span>
+      </li>
+      <li (click)="showSide()" [matBadge]="basket.products.length" matBadgePosition="below" MatBadgeSize='small'
+        matBadgeColor="accent" [matBadgeHidden]="basket.products.length == 0" routerLinkActive="active"
+        class="nav_side-link" routerLink="/basket"><i class="fa-solid fa-basket-shopping"></i>
 
-          <li class="nav-item">
-
-          </li>
+        <span></span>
+      </li>
+    </ul>
 
 
-
-        </ul>
-
-      </div>
-    </div>
+    <span class="bar"></span>
   </div>
-
-
   <!--nav  -->
 
   <ul class="nav_links">
-    <li routerLinkActive="active">
+    <li>
       <a routerLink="/home" href="">home
 
         <span></span>
@@ -108,8 +72,8 @@
         <span></span>
       </a>
     </li>
-    <li routerLinkActive="active">
-      <a routerLink="/contact" href="">contact
+    <li>
+      <a routerLink="" fragment="contact">contact
         <span></span>
         <span></span>
         <span></span>
@@ -146,9 +110,9 @@
         </a>
       </ng-container>
     </li>
-    <li [matBadge]="basket.products.length" matBadgePosition="after" MatBadgeSize='small'
-    matBadgeColor="accent" [matBadgeHidden]="basket.products.length == 0" routerLinkActive="active">
-      <a  routerLink="/basket"><i class="fa-solid fa-basket-shopping"></i>
+    <li [matBadge]="basket.products.length" matBadgePosition="below" MatBadgeSize='small' matBadgeColor="accent"
+      [matBadgeHidden]="basket.products.length == 0" routerLinkActive="active">
+      <a routerLink="/basket"><i class="fa-solid fa-basket-shopping"></i>
         <span></span>
         <span></span>
         <span></span>
@@ -156,12 +120,11 @@
       </a>
 
 
+
     </li>
 
 
   </ul>
-
-
 
 
 
