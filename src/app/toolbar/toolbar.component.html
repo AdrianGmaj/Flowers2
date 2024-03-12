@@ -40,8 +40,8 @@
 
         <span></span>
       </li>
-      <li (click)="showSide()" [matBadge]="basket.products.length" matBadgePosition="below" MatBadgeSize='small'
-        matBadgeColor="accent" [matBadgeHidden]="basket.products.length == 0" routerLinkActive="active"
+      <li (click)="showSide()" [matBadge]="basketProcutCount" matBadgePosition="below" MatBadgeSize='small'
+        matBadgeColor="accent" [matBadgeHidden]="basketProcutCount == 0" routerLinkActive="active"
         class="nav_side-link" routerLink="/basket"><i class="fa-solid fa-basket-shopping"></i>
 
         <span></span>
@@ -110,8 +110,8 @@
         </a>
       </ng-container>
     </li>
-    <li [matBadge]="basket.products.length" matBadgePosition="below" MatBadgeSize='small' matBadgeColor="accent"
-      [matBadgeHidden]="basket.products.length == 0" routerLinkActive="active">
+    <li [matBadge]="basketProcutCount" matBadgePosition="below" MatBadgeSize='small' matBadgeColor="accent"
+      [matBadgeHidden]="basketProcutCount == 0" routerLinkActive="active">
       <a routerLink="/basket"><i class="fa-solid fa-basket-shopping"></i>
         <span></span>
         <span></span>

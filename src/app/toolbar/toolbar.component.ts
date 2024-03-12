@@ -1,8 +1,9 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth/auth.service';
 import { BasketService } from '../services/basket/basket.service';
-import { Router } from '@angular/router';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-toolbar',
@@ -10,7 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-  basket;
+  basketProcutCount: number;
   sideOpen = false;
   constructor(private authService: AuthService,
     private basketService: BasketService,
@@ -19,8 +20,33 @@ export class ToolbarComponent implements OnInit {
 
   ngOnInit() {
 
+    let element = document.querySelector('.nav') as HTMLElement;
+    console.log(element);
+
+    console.log('>>on init url:', this.router.url);
+    if (this.router.url == '/basket' || this.router.url == '/shop' || this.router.url == '/user' || this.router.url=='/purchase') {
+      element.classList.add('scrolled');
+    }
+
+
+    // sprawdzamy chy w ruterze zmienil sie adres
+    this.router.events
+      // interesuje nas tylko skonczona zmoiana adresu
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        console.log('>>on init url:', this.router.url);
+        if (this.router.url == '/basket' || this.router.url == '/shop' || this.router.url == '/user' || this.router.url=='/purchase') {
+          element.classList.add('scrolled');
+        } else {
+          element.classList.remove('scrolled');
+        }
+      })
+
+
     this.basketService.getBasket().subscribe((response) => {
-      this.basket = response
+      this.basketProcutCount = response.products
+        .map(item => item.count)
+        .reduce((prev, current) => prev + current, 0);
     })
 
 
@@ -29,13 +55,19 @@ export class ToolbarComponent implements OnInit {
   onWindowScroll() {
     let element = document.querySelector('.nav') as HTMLElement;
 
+    //nie pokazuj dla basket i shop
 
-    if (window.scrollY > element.clientHeight * 1) {
+    console.log('>> url:', this.router.url);
+
+    if (this.router.url == '/basket' || this.router.url == '/shop' || this.router.url == '/user' || this.router.url == '/user' || this.router.url=='/purchase') {
       element.classList.add('scrolled');
     } else {
-      element.classList.remove('scrolled');
+      if (window.scrollY > element.clientHeight * 1) {
+        element.classList.add('scrolled');
+      } else {
+        element.classList.remove('scrolled');
+      }
     }
-
   }
 
   isSignedAsAdmin() {
@@ -49,13 +81,13 @@ export class ToolbarComponent implements OnInit {
   isSigned() {
     return this.authService.isSigned()
   }
-  showSide(){
-    if(this.sideOpen == false){
+  showSide() {
+    if (this.sideOpen == false) {
       this.sideOpen = true;
-    }else{
+    } else {
       this.sideOpen = false
     }
-    
-      }
+
+  }
 
 }

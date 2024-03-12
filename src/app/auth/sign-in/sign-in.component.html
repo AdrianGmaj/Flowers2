@@ -13,6 +13,9 @@
         <mat-error  style="color:whitesmoke" *ngIf="SignInForm.get('email').hasError('email')">
         enter valid email
         </mat-error>
+        <mat-error  style="color:whitesmoke" *ngIf="SignInForm.hasError('credentials')">
+        no acount, try again or register  
+        </mat-error>
       <input formControlName="password" type="password" placeholder="password">
       <mat-error style="color:whitesmoke"  *ngIf=" SignInForm.get('password').hasError('required')">
         password requaired*
