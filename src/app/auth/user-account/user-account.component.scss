@@ -4,17 +4,12 @@
         [container-start] 1fr [center-start] repeat(6,
             [col-start] minmax(min-content, 25rem) [col-end]) [center-end] 1fr [container-end];
 
-min-height: 100vh;
-height: fit-content;
-background-color: #00664e;
+    min-height: 100vh;
+    height: fit-content;
+    background-color: #00664e;
 
 
-    .toolbar {
-        grid-template-columns: container-start/conteinar-end;
-        height: 58px;
-        background-color: #05a081;
 
-    }
 
     &-container {
 
@@ -32,7 +27,7 @@ background-color: #00664e;
             flex-direction: column;
             justify-content: center;
             background: linear-gradient(to top, #ffefe9dc, #00664e, ),
-            url(https://grainy-gradients.vercel.app/noise.svg);
+                url(https://grainy-gradients.vercel.app/noise.svg);
 
         }
 
@@ -79,7 +74,7 @@ background-color: #00664e;
         a {
             align-self: center;
             padding: 1rem;
-    
+
             background: #05a081;
             color: whitesmoke;
             text-transform: uppercase;
@@ -95,14 +90,14 @@ background-color: #00664e;
             z-index: 1;
             border: none;
             border: whitesmoke 2px solid;
-          
+
 
         }
 
         a::before {
             content: "";
-        
-           
+
+
             transform: scale(2rem);
             position: absolute;
 
@@ -122,16 +117,17 @@ background-color: #00664e;
 
         a:hover::before {
             transform: scale(1);
-         
+
         }
-        a:hover{
+
+        a:hover {
             color: #05a081;
         }
 
         a.log-out {
             align-self: center;
             padding: 1rem;
-    
+
             background: #fbae3c;
             color: whitesmoke;
             text-transform: uppercase;
@@ -149,7 +145,7 @@ background-color: #00664e;
             border: whitesmoke 2px solid;
             text-decoration: none;
             cursor: pointer;
-          
+
         }
 
 
@@ -182,7 +178,7 @@ background-color: #00664e;
 
 
         &_history {
-            background-image: linear-gradient( #fbaf3c52,#0c4e3fbe,), url("/assets/pexels-amina-filkins-5409735.jpg");
+            background-image: linear-gradient(#fbaf3c52, #0c4e3fbe, ), url("/assets/pexels-amina-filkins-5409735.jpg");
             background-size: cover;
             background-position: center;
 
@@ -256,18 +252,20 @@ background-color: #00664e;
         }
 
     }
+
     @media screen and (max-width: 800px) {
         .user-container {
             display: grid;
             grid-template-columns: 1fr;
             grid-column: container-start/container-end;
-    
-        }
-       
-    @media screen and (max-width: 400px) {
-  
-        .toolbar {
-            height: 13rem;}
-    }
-}}
 
+        }
+
+        @media screen and (max-width: 400px) {
+
+            .toolbar {
+                height: 13rem;
+            }
+        }
+    }
+}
