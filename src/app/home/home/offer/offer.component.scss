@@ -1,173 +1,183 @@
-::ng-deep  .offer {
-    display: grid;
-    // grid-template-rows: 2 1fr;
-    row-gap: 3vh;
-    padding: 6vh 3vw;
-    margin-bottom: 1vh;
+ .offer {
+     display: grid;
+     display: grid;
+     grid-template-columns:
+         [container-start] 1fr [center-start] repeat(6,
+             [col-start] minmax(min-content, 25rem) [col-end]) [center-end] 1fr [container-end];
+     background-image: url("/assets/background.svg");
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
 
-    &_title {
-        font-size: calc(1.5rem + 4vw);
-        text-align: center;
-        margin-top: 2rem;
-        padding: 4rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        position: relative;
-    }
+     row-gap: 3vh;
+     padding: 8vh 3vw;
+ 
 
 
-    &_title:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 20%;
-        width: 60%;
-
-        height: 0.5rem;
-        background: linear-gradient(to right, #07a98881, transparent),
-            url(https://grainy-gradients.vercel.app/noise.svg);
-        justify-self: center;
-    }
-
-    &_content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-        gap: 3vh;
-        place-items: center;
 
 
-        &-card {
-            width: 40rem;
-            height: 40rem;
-            position: relative;
+     .container {
+         grid-column: center-start/center-end;
+         padding: 0;
+      
+ 
+     }
 
-        }
-
-        &-card-front,
-        &-card-back {
-            background-repeat: none;
-            background-position: center;
-            background-size: cover;
-
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transition: all 1s ease-in-out;
-            backface-visibility: hidden;
-            transform: perspective(100rem);
-
-            display: grid;
-            justify-items: center;
-            align-items: start;
-            padding: 3rem
-        }
-
-        &-card-back p {
-            place-self: center;
-            font-size: 1.5rem;
-            font-weight: 400;
-        }
-
-        &-card-back h4 {
-            place-self: center;
-            font-size: 2.5rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        &-card:first-child &-card-front {
-            background: url("/assets/roses.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-
-        &-card:nth-child(2) &-card-front {
-            background: url("/assets/dahlia1.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-
-        &-card:nth-child(3) &-card-front {
-            background: url("/assets/orchid1.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-
-        &-card:nth-child(4) &-card-front {
-            background: url("/assets/peony1.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-
-        &-card:nth-child(5) &-card-front {
-            background: url("/assets/pink-roses.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-
-        &-card:nth-child(6) &-card-front {
-            background: url("/assets/sunflower1.jpg");
-            background-size: cover;
-            background-position: center;
-        }
+     &_title {
+         font-family: "Nunito", sans-serif;
+         font-weight: 800;
+         color: white;
+         font-size: 5rem;
+         text-align: center;
+         margin-top: 2rem;
+         padding: 5rem;
+         line-height: 120%;
+         text-transform: uppercase;
+         position: relative;
+     }
 
 
-    }
+     //  &_title:after {
+     //      content: '';
+     //      position: absolute;
+     //      bottom: 0;
+     //      left: 20%;
+     //      width: 60%;
 
-    @media screen and (max-width: 500px) {
-        padding: 2vh 2vw;
+     //      height: 0.5rem;
+     //      background: linear-gradient(to right, #07a98881, transparent),
+     //          url(https://grainy-gradients.vercel.app/noise.svg);
+     //      justify-self: center;
+     //  }
 
-        .offer_content {
-            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        }
+     &_content {
 
-        .offer_content-card {
-            width: 25rem;
-            height: 25rem;
-        }
-    }
-}
+         display: grid;
+         width: 90%;
+         grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+         gap: 1vh;
+         padding: 2rem;
+         border-radius: 5rem;
+         place-items: center;
+         place-self: center;
+         margin: 2rem;
 
-.offer_content-card-back {
-    transform: perspective(100rem) rotateY(0.5turn);
-}
+         border-radius: 5rem;
+        //  padding: 4rem 8rem;
+         //  display: inline-block;
+         border: 3px solid whitesmoke;
+         font-size: 2.5rem;
+         border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+         text-transform: uppercase;
+         letter-spacing: 0.3ch;
 
-.offer_content-card:hover .offer_content-card-front {
-    transform: perspective(100rem) rotateY(0.5turn);
+         position: relative;
 
-}
+         &::before {
+             content: '';
+             border: 2px solid whitesmoke;
+             display: block;
+             width: 100%;
+             height: 100%;
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+             border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+         }
 
-.offer_content-card:first-child:hover .offer_content-card-back {
-    transform: perspective(100rem) rotateY(1turn);
-    background-color: #c21e56
-}
 
-.offer_content-card:nth-child(2):hover .offer_content-card-back {
-    transform: perspective(100rem) rotateY(1turn);
-    background-color: #dbc8ab
-}
+         &-card {
+             width: 70rem;
+             height: 40rem;
+             position: relative;
 
-.offer_content-card:nth-child(3):hover .offer_content-card-back {
-    transform: perspective(100rem) rotateY(1turn);
-    background-color: #f1ebd9
-}
+         }
 
-.offer_content-card:nth-child(6):hover .offer_content-card-back {
-    transform: perspective(100rem) rotateY(1turn);
-    background-color: #ffda03;
+         &-card-front,
+         &-card-back {
+             background-repeat: none;
+             background-position: center;
+             background-size: cover;
 
-}
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             transition: all 1s ease-in-out;
+             backface-visibility: hidden;
+             transform: perspective(100rem);
 
-.offer_content-card:nth-child(5):hover .offer_content-card-back {
-    transform: perspective(100rem) rotateY(1turn);
-    background-color: #f3c9d5;
+             display: grid;
+             justify-items: center;
+             align-items: start;
+             padding: 3rem
+         }
 
-}
+         &-card-back p {
+             place-self: center;
+             font-size: 1.5rem;
+             font-weight: 400;
+         }
 
-.offer_content-card:nth-child(4):hover .offer_content-card-back {
-    transform: perspective(100rem) rotateY(1turn);
-    background-color: #f3c9d5;
+         &-card-back h4 {
+             place-self: center;
+             font-size: 2.5rem;
+             font-weight: 600;
+             text-transform: uppercase;
+         }
 
-}
+         &-card:first-child &-card-front {
+             background: url("/assets/roses.jpg");
+             background-size: cover;
+             background-position: center;
+         }
+
+         &-card:nth-child(2) &-card-front {
+             background: url("/assets/dahlia1.jpg");
+             background-size: cover;
+             background-position: center;
+         }
+
+         &-card:nth-child(3) &-card-front {
+             background: url("/assets/orchid1.jpg");
+             background-size: cover;
+             background-position: center;
+         }
+
+         &-card:nth-child(4) &-card-front {
+             background: url("/assets/peony1.jpg");
+             background-size: cover;
+             background-position: center;
+         }
+
+         &-card:nth-child(5) &-card-front {
+             background: url("/assets/pink-roses.jpg");
+             background-size: cover;
+             background-position: center;
+         }
+
+         &-card:nth-child(6) &-card-front {
+             background: url("/assets/sunflower1.jpg");
+             background-size: cover;
+             background-position: center;
+         }
+
+
+     }
+
+     @media screen and (max-width: 500px) {
+      
+
+         .offer_content {
+             grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+             padding: 2rem 2rem;
+         }
+
+         .offer_content-card {
+             width: 25rem;
+             height: 25rem;
+         }
+     }
+ }

@@ -2,25 +2,58 @@
     display: grid;
     grid-template-rows: 2 1fr;
 
-    padding: 4vh 4vw;
+    padding: 7vh 4vw;
+
 
 
 
     h2 {
-        color: whitesmoke;
+        font-family: "Nunito", sans-serif;
+        font-weight: 800;
+        color: white;
         font-size: 5rem;
         text-transform: uppercase;
         letter-spacing: 0.9rem;
         justify-self: center;
-        padding-top: 0rem;
+        padding: 1rem;
+        line-height: 110%;
+        text-align: center;
+    }
+
+    .container {
+        border-radius: 5rem;
+        padding: 4rem 8rem;
+        //  display: inline-block;
+        border: 3px solid whitesmoke;
+        font-size: 2.5rem;
+        border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+        text-transform: uppercase;
+        letter-spacing: 0.3ch;
+
+        position: relative;
+
+        &::before {
+            content: '';
+            border: 2px solid#fbae3c;
+            display: block;
+            width: 102%;
+            height: 102%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+            border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+        }
     }
 
     &_content {
         background-color: whitesmoke;
-
+        position: relative;
         border-radius: 1rem;
         display: flex;
         flex-direction: row;
+
+
 
 
 
@@ -58,6 +91,7 @@
                 font-weight: 200;
                 letter-spacing: 0.5rem;
                 padding: 2rem;
+
             }
         }
     }
@@ -66,8 +100,25 @@
         .why-us_content {
             display: flex;
             flex-direction: column;
+            width: 80vw;
 
 
+        }
+
+        .container {
+            align-self: center;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 7px;
+
+
+            &::before {
+               display: none;
+            }
+
+            align-self: center;
+            justify-content: center;
         }
 
     }

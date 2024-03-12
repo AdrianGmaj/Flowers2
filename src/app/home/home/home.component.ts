@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show')
+      }
+    })
+  })
   constructor() { }
 
   ngOnInit() {
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((element) => this.observer.observe(element))
   }
 
 }

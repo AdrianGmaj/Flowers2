@@ -5,6 +5,7 @@
     justify-content: center;
     row-gap: 1vw;
     padding: 7vh 4vw;
+    
 
     &_title {
         font-size: calc(1.5rem + 3vw), ;
@@ -14,6 +15,11 @@
         text-transform: uppercase;
         margin-top: 3rem;
         justify-self: center;
+        font-family: "Nunito", sans-serif;
+        font-weight: 800;
+     line-height: 120%;
+        font-size: 5rem;
+        
 
     }
 
@@ -40,24 +46,23 @@
 
 
             border-bottom: 1rem solid whitesmoke;
-            border-right: 0.5rem solid whitesmoke;
-            border-left: 0.5rem solid whitesmoke;
+            border-right: 0.2rem solid whitesmoke;
+            border-left: 0.2rem solid whitesmoke;
             // border-top:1px solid whitesmoke;
 
 
-            border-top-right-radius: 5%;
-            border-top-left-radius: 5%;
+        
             border-bottom-right-radius: 25%;
             border-bottom-left-radius: 25%;
-            font-size: 5vh;
+            font-size: 1.5rem;
             color: whitesmoke;
             text-align: center;
 
 
 
 
-            background: linear-gradient(to right, #07a98881, transparent),
-                url(https://grainy-gradients.vercel.app/noise.svg);
+            background: linear-gradient(to top, #07a98881, transparent),
+          
 
         }
 
@@ -68,7 +73,7 @@
         input::placeholder {
             color: whitesmoke;
             text-transform: uppercase;
-            font-size: 2vh;
+            font-size: 1rem;
             letter-spacing: 0.5rem;
             font-weight: 200;
         }
@@ -77,10 +82,9 @@
         button {
             align-self: center;
             padding: 1rem;
-            background-color: whitesmoke;
-            background: linear-gradient(to top, whitesmoke, transparent),
-                url(https://grainy-gradients.vercel.app/noise.svg);
-            color: #05a081;
+    
+            background: #05a081;
+            color: whitesmoke;
             text-transform: uppercase;
             margin-top: 2rem;
             font-weight: 700;
@@ -93,13 +97,14 @@
             transition: all 1s ease-in-out;
             z-index: 1;
             border: none;
+            border: whitesmoke 2px solid;
 
         }
 
         button::before {
             content: "";
-            color: #05a081;
-            background-color: whitesmoke;
+        
+           
             transform: scale(2rem);
             position: absolute;
 
@@ -108,15 +113,21 @@
             left: 0;
             height: 100%;
             width: 100%;
-            background-color: #05a081;
+            background-color: whitesmoke;
+            color: #05a081;
             border-radius: inherit;
             z-index: -1;
             transform: scale(0);
             transition: all 0.5s ease-in-out;
+            border: #05a081 2px solid;
         }
 
         button:hover::before {
             transform: scale(1);
+         
+        }
+        button:hover{
+            color: #05a081;
         }
 
         button[disabled]:hover::before {
@@ -125,16 +136,11 @@
 
         button[disabled]:hover {
 
-            color: #05a081;
+            cursor: not-allowed;
             
 
         }
 
-        button:hover:not([disabled]) {
-            color: white;
-            // background-color:#05a081 ;
-            border: 0.2rem solid whitesmoke;
-        }
     }
 
     form {

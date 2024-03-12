@@ -4,11 +4,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 
 }
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 @import "scss/2.variables";
 @import "scss/3.utilities";
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%; ;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color:  #00664e,}
+
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+

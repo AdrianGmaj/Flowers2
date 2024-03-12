@@ -27,9 +27,11 @@
         font-size: calc(1rem + 0.2vw);
         justify-self: center;
         text-transform: uppercase;
-        font-weight: 200;
+        font-weight: 400;
         letter-spacing: 0.5rem;
         padding: 2rem;
+        text-align: justify;
+        text-justify: inter-word;
     }
 }
 

@@ -1,20 +1,11 @@
-<section class="offer">
+<section class="offer" >
+  <div class="container">
   <h2 class="offer_title">
-    Our offer
+in our offer
   </h2>
   <div class="offer_content">
 
-    <!-- <div class="offer_content-card">
-  
-      <div class="offer_content-card-front"></div>
-  
-      <div class="offer_content-card-back">
-        <h4>rose</h4>
-        <p>A rose is either a woody perennial flowering plant of the genus Rosa in the family Rosaceae or the flower it
-          bears.
-        </p>
-      </div>
-    </div> -->
+
 
     <div *ngFor="let card of cards">
       <app-card [cards]="card"></app-card>
@@ -25,4 +16,5 @@
 
 
   </div>
+</div>
 </section>
