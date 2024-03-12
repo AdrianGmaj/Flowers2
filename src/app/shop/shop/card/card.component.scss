@@ -1,81 +1,89 @@
 .text-center {
-    width: 40rem;
-    
+    width: 30rem;
+    position: relative;
+
 }
 
 
-    img {
+img {
 
-        height: 30rem;
-        object-fit: cover;
+    height: 25rem;
+    object-fit: cover;
 
-        vertical-align: middle;
-    }
+    vertical-align: middle;
+    padding: 1rem;
+}
 
-    a {
-
-
-        padding: 0.5rem;
-        background-color: whitesmoke;
-        background: linear-gradient(to top, whitesmoke, transparent),
-            url(https://grainy-gradients.vercel.app/noise.svg);
-        color: yellow;
-        text-transform: uppercase;
-        margin-top: 2rem;
-        font-weight: 700;
-        font-size: 2rem;
-        border-radius: 0.2rem;
-        
-        margin-top: 4rem;
-        position: relative;
-        text-align: center;
-        transition: all 1s ease-in-out;
-        z-index: 1;
-        margin: 1rem;
-        cursor: pointer;
-
-
-    }
-    a::before {
-        content: "";
-        color: #05a081;
-        background-color: whitesmoke;
-        transform: scale(2rem);
-        position: absolute;
-
-        top: 0;
-
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #05a081;
-        border-radius: inherit;
-        z-index: -1;
-        transform: scale(0);
-        transition: all 0.5s ease-in-out;
-    }
-
-    a:hover::before {
-        transform: scale(1);
-    }
-
-    a:hover {
-        color: white;
-        background-color:#05a081 ;
-        border: 0.2rem solid whitesmoke;
-    }
 
 
 @media screen and (max-width: 500px) {
-img{
-    height: 2rem;
+
+
+    .cards_list {
+        gap: 1rem;
+        padding: calc(1rem + 0.5vw);
+    }
 }
-.text-center {
-    width: 25rem;
-    
-}
-.cards_list{
-    gap: 1rem;
-    padding: calc(1rem + 0.5vw);
-}
+
+.card {
+
+
+    width: 30rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   
+    overflow: hidden;
+   
+
+    &-title {
+        font-family: "Nunito", sans-serif;
+        font-weight: 700;
+        padding: 1rem;
+    }
+
+    &-action {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 4rem;
+
+        a {
+            text-decoration: none;
+            color: white;
+            width: 100%;
+            text-align: center;
+            text-justify: center;
+            text-transform: uppercase;
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .buy {
+            background-color: #fbaf3cab;
+            border-right: 1px solid white;
+        }
+
+        .buy:hover {
+            background-color: #fbae3c;
+        }
+
+        .details {
+            background-color: #0245379b;
+        }
+
+        .details:hover {
+            background-color: #00664e;
+        }
+
+
+    }
+
 }

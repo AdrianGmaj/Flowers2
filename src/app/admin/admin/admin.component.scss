@@ -4,7 +4,7 @@
 
     .toolbar {
         grid-template-columns: container-start/conteinar-end;
-        height: 16rem;
+        height: 58px;
 
 
 
@@ -18,14 +18,17 @@
 
 
         .side-bar {
-            background-color: whitesmoke;
+            background-color: #fbae3c;
+            ;
             box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .2);
             position: fixed;
-            height: 10%;
+            height: 6rem;
             width: 100%;
             display: grid;
             align-items: center;
             z-index: 22;
+            font-family: "Nunito", sans-serif;
+            font-weight: 700;
 
             &_content {
 
@@ -72,7 +75,7 @@
     @media screen and (max-width: 500px) {
         .toolbar {
             grid-template-columns: container-start/conteinar-end;
-            height: 13rem;
+            height: 58px;
 
         }
 
@@ -85,11 +88,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
 
         }
 
         .select {
             justify-self: center;
+            width: 100vw;
         }
     }
 

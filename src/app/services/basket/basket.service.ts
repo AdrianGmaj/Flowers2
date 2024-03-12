@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Basket } from '../auth/basket';
-
+import { Basket, BasketItem } from '../auth/basket';
 
 
 interface ProductResponse {
@@ -36,11 +35,21 @@ export class BasketService {
   addProduct(product: ProductResponse) {
     const basket = this.Basket$.getValue();
 
-    basket.products.push(product);
+    const productInBasket: BasketItem = basket.products.find(item => item.product.id === product.id);
+
+    if (productInBasket) {
+      productInBasket.count++;
+    } else {
+      basket.products.push({
+        product: product,
+        count: 1
+      });
+
+    }
+
     basket.price = this.calculatePrice(basket.products)
 
     this.Basket$.next(basket)
-
   }
 
   cleanBasket() {
@@ -50,24 +59,54 @@ export class BasketService {
   }
 
   deleteProduct(product: ProductResponse) {
-
     const basket = this.Basket$.getValue();
-    const index = basket.products.indexOf(product)
+    const index = basket.products.findIndex((item) => {
+      product.id === item.product.id
+    })
     basket.products.splice(index, 1);
 
-    basket.price = this.calculatePrice(basket.products)
+    basket.price = this.calculatePrice(basket.products);
 
     console.log(basket)
-    this.Basket$.next(basket)
+    this.Basket$.next(basket);
   }
 
-  calculatePrice(products): number {
+  addCount(productId: number): void {
+    const basket = this.Basket$.getValue();
+
+    const basketItem: BasketItem = basket.products.find(item => item.product.id === productId);
+
+    if (basketItem) {
+      basketItem.count += 1;
+    }
+
+    basket.price = this.calculatePrice(basket.products);
+    this.Basket$.next(basket);
+  }
+
+
+  removeCount(productId: number): void {
+    const basket = this.Basket$.getValue();
+
+    const basketItem: BasketItem = basket.products.find(item => item.product.id === productId);
+
+    if (basketItem) {
+      if (basketItem.count > 1) {
+        basketItem.count -= 1;
+      }
+    }
+
+    basket.price = this.calculatePrice(basket.products);
+    this.Basket$.next(basket);
+  }
+
+
+  calculatePrice(products: Array<BasketItem>): number {
     if (products.length === 0) {
       return 0;
     }
     return products
-      .map(p => p.price)
+      .map(item => item.product.price * item.count)
       .reduce((prev, current) => prev + current, 0)
-
   }
 }

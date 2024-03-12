@@ -1,123 +1,164 @@
+.toolbar {
+
+    height: 60px;
+
+
+}
+
 .basket {
-    display: grid;
-    grid-template-columns:
-        [container-start] 1fr [center-start] repeat(6,
-            [col-start] minmax(min-content, 25rem) [col-end]) [center-end] 1fr [container-end];
 
-    background: linear-gradient(to top, #ffefe982, #ffefe9dc),
-        url(https://grainy-gradients.vercel.app/noise.svg);
-        padding: 6vh 4vw;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    height: min-content;
+    background-color: #00664e;
+    height: fit-content;
 
-    .toolbar {
-        grid-template-columns: container-start/conteinar-end;
-        margin-top: 20rem;
+.topper{
+    width: 100vw;
+    height: 30vh;
+    background-color: #fbae3c;
+    background-image: linear-gradient(#fbaf3c52, #0ea78660), url("/assets/pexels-amina-filkins-5414056.jpg");
+    background-size: cover;
+    background-position:top;
+}
 
-        
-    }
-    .header{
+
+    .header {
         display: flex;
-       
-
-        h2{
-            font-size: calc(4rem + 3vw), ;
-              font-weight: 300;
-              text-transform: uppercase;
-              color: whitesmoke;
-              text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-          }
-          i {
-            font-size: calc(3rem + 2vw), ;
-            color: #ffda03;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-    
-        }
-    }
-    &-container{
-        grid-column: container-start/container-end;
-        min-height: 60vh;
+        flex-direction: row;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-self: center;
+        align-items: flex-start;
+        margin-left: 2rem;
 
-   
-        img{
-            max-width: 50px;
-            max-height: 50px;
+
+        h2 {
+            font-size: 2rem, ;
+            font-family: "Nunito", sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: white;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+            border-bottom: 2px white solid;
         }
-        table{
-            margin-top: 10vh;
+
+        i {
+            font-size: 2rem, ;
+            color: #fbae3c;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+
+        }
+    }
+
+    .pricing {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+        width: 90vw;
+        margin-top: 2rem;
+        padding: 2vh;
+     
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            justify-self: center;
+            align-self: center;
         
         }
+        .pay{
+            border: #fbae3c 2px solid ;
+            background-color:whitesmoke;
+            border-radius: 2rem;
+       
+        }
 
-        button{
-            
+
+    }
+
+.count{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+    .content {
+
+        width: 100vw;
+        height: fit-content;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: center;
+        padding: 3vh 3vw;
+
+        background: linear-gradient(to top, #ffefe9dc, #00664e, ),
+            url(https://grainy-gradients.vercel.app/noise.svg);
+
+    }
+
+    &-container {
+
+
+
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+
+
+        button {
+
             padding: 1rem;
-            background-color: whitesmoke;
-            background: linear-gradient(to top, whitesmoke, transparent),
-                url(https://grainy-gradients.vercel.app/noise.svg);
+
             color: #05a081;
             text-transform: uppercase;
-            
-          
+            background: none;
+
             font-size: 2rem;
             border-radius: 0.5rem;
-           min-width: 40%;
-            
+            min-width: 40%;
+
             position: relative;
             text-align: center;
             transition: all 1s ease-in-out;
             z-index: 1;
             border: none;
         }
-        button::before {
-            content: "";
-            color: #05a081;
-            background-color: whitesmoke;
-            transform: scale(2rem);
-            position: absolute;
 
-            top: 0;
 
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: #05a081;
-            border-radius: inherit;
-            z-index: -1;
-            transform: scale(0);
-            transition: all 0.5s ease-in-out;
-        }
 
-        button:hover::before {
-            transform: scale(1);
-        }
 
-        button:hover {
-            color: white;
-            background-color:#05a081 ;
-            border: 0.2rem solid whitesmoke;
-        }
-   
 
-        .pay{
-            padding: 2rem;
-            a{
-               
-                font-size: calc(1rem + 1vw), ;
-                color: white;
-                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-                text-transform: uppercase;
+
+
+        .pay {
+            padding: 1.1rem;
+
+            a {
+
+                font-size: 2rem, ;
+                color: black;
+
+
                 padding: 2rem;
                 border-radius: 0.2rem;
 
-               i{
-                font-size: calc(1rem + 1vw), ;
-                color: #ffda03;
-                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+                i {
+                    font-size: calc(1rem + 1vw), ;
+                    color: #fbae3c;
+                    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+                }
             }
-            }
-          
+
         }
     }
 }

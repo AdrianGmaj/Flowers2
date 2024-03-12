@@ -9,14 +9,15 @@
 
     .toolbar {
         grid-template-columns: container-start/conteinar-end;
-        height: 16rem;
+        height: 58px;
 
     }
 
     &-content {
         grid-column: container-start/conteinar-end;
         min-height: 80vh;
-        background: linear-gradient(to top, #ffefe982, #ffefe9dc),
+
+        background: linear-gradient(to top, #ffefe9dc, #00664e, ),
             url(https://grainy-gradients.vercel.app/noise.svg);
         padding: 6vh 6vw;
 

@@ -3,19 +3,12 @@
     grid-template-columns:
         [container-start] 1fr [center-start] repeat(6,
             [col-start] minmax(min-content, 25rem) [col-end]) [center-end] 1fr [container-end];
-    background-image: linear-gradient(#ffefe982, #0ea78660), url("/assets/pexels-amina-filkins-5414056.jpg");
+    background-image: linear-gradient(#fbaf3c52, #0ea78660), url("/assets/pexels-amina-filkins-5414056.jpg");
     background-size: cover;
     background-position: center;
 
 
 
-
-
-    .toolbar {
-        grid-template-columns: container-start/containar-end;
-        height: 16rem;
-
-    }
 
 
     &_content {
@@ -26,38 +19,45 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+      
 
         h2{
             font-size: calc(3rem + 2vw), ;
-              font-weight: 300;
+            
               text-transform: uppercase;
               color: whitesmoke;
               padding: 3rem;
+              font-family: "Nunito", sans-serif;
+              font-weight: 700;
           }
 
-          a{
+    
+          a {
+            align-self: center;
             padding: 1rem;
-            background-color: whitesmoke;
-            background: linear-gradient(to top, whitesmoke, transparent),
-                url(https://grainy-gradients.vercel.app/noise.svg);
-            color: #05a081;
+    
+            background: #05a081;
+            color: whitesmoke;
             text-transform: uppercase;
-            
-          
-            font-size: 3rem;
+            margin-top: 2rem;
+            font-weight: 700;
+            font-size: 2rem;
             border-radius: 0.5rem;
-           min-width: 40%;
-            
+            width: 40%;
+            margin-top: 4rem;
             position: relative;
             text-align: center;
             transition: all 1s ease-in-out;
             z-index: 1;
             border: none;
-          }
-          a::before {
+            border: whitesmoke 2px solid;
+
+        }
+
+        a::before {
             content: "";
-            color: #05a081;
-            background-color: whitesmoke;
+        
+           
             transform: scale(2rem);
             position: absolute;
 
@@ -66,21 +66,21 @@
             left: 0;
             height: 100%;
             width: 100%;
-            background-color: #05a081;
+            background-color: whitesmoke;
+            color: #05a081;
             border-radius: inherit;
             z-index: -1;
             transform: scale(0);
             transition: all 0.5s ease-in-out;
+            border: #05a081 2px solid;
         }
 
         a:hover::before {
             transform: scale(1);
+         
         }
-
-        a:hover {
-            color: white;
-            background-color:#05a081 ;
-            border: 0.2rem solid whitesmoke;
+        a:hover{
+            color: #05a081;
         }
 
     }

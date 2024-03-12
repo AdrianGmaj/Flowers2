@@ -1,10 +1,10 @@
 <ng-container *ngIf="basket.length; else emptyBasket">
-
+  <div class="toolbar"> </div>
   <div class="basket">
-    <div class="toolbar"></div>
-    <div class="basket-container">
 
-      <div class="container">
+    <div class="basket-container">
+<div class="topper"></div>
+      <div class="content">
         <div class="header">
           <h2>your basket</h2>
           <i class="fa-solid fa-basket-shopping"></i>
@@ -20,18 +20,30 @@
           <!-- Name Column -->
           <ng-container matColumnDef="price">
             <th mat-header-cell *matHeaderCellDef> price </th>
-            <td mat-cell *matCellDef="let element"> {{element.price}} $$ </td>
+            <td mat-cell *matCellDef="let element"> {{element.product.price}} $$ </td>
+          </ng-container>
+          <!-- Name Column -->
+          <ng-container matColumnDef="count">
+            <th mat-header-cell *matHeaderCellDef> counting </th>
+            <td class="count" mat-cell *matCellDef="let element"> <button (click)="removeCount(element)" [disabled]="element.count === 1">
+              -</button>
+  
+  
+            <p> {{element.count}}</p>
+  
+  
+            <button (click)="addCount(element)"> +</button></td>
           </ng-container>
 
           <!-- Weight Column -->
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef> name </th>
-            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.product.name}} </td>
           </ng-container>
 
           <ng-container matColumnDef="thumbnail">
             <th mat-header-cell *matHeaderCellDef> thumbnail</th>
-            <td mat-cell *matCellDef="let element"> <img class="img-fluid img-thumbnail" src="{{element.thumbnail}}"
+            <td mat-cell *matCellDef="let element"> <img class="img-fluid img-thumbnail" src="{{element.product.thumbnail}}"
                 alt="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             </td>
           </ng-container>
@@ -54,17 +66,20 @@
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
 
-        <div class="m-4" *ngIf="basketPrice">
-          <h3 class="display-2"> total price: {{basketPrice}}$$</h3>
+        <div class="pricing" *ngIf="basketPrice">
+          <h3 class="display-2"> Total price: {{basketPrice}}$$</h3>
+          <div *ngIf="isSigned()" class="pay"><a routerLink="/purchase"><i class="fa-regular fa-credit-card"></i> complete your purchase</a></div>
+          <div *ngIf="!isSigned()" class="pay" ><a routerLink="/sign-in"><i class="fa-regular fa-credit-card"></i>  login to purchase </a></div>
         </div>
-        <div *ngIf="isSigned()" class="pay"><a routerLink="/purchase"><i class="fa-regular fa-credit-card"></i> complete your purchase</a></div>
-        <div *ngIf="!isSigned()" class="pay" ><a routerLink="/sign-in"><i class="fa-regular fa-credit-card"></i>  To purchase your products, please log in here </a></div>
+ 
 
 
 
       </div>
+      
     </div>
-  </div>
+
+</div>
 </ng-container>
 
 

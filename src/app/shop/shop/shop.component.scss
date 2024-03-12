@@ -1,16 +1,26 @@
 .shop {
+    height: fit-content;
+    min-height: 100vh;
 
-
-
-    background: linear-gradient(to top, #ffefe982, #ffefe9dc),
+    background: linear-gradient(to top, #ffefe9dc, #00664e, ),
         url(https://grainy-gradients.vercel.app/noise.svg);
 
 
     .toolbar {
         grid-template-columns: container-start/conteinar-end;
-        height: 16rem;
+        height: 55px;
 
     }
+
+
+
+
+
+
+
+
+
+
 
     &_container {
         display: grid;
@@ -21,21 +31,20 @@
 
 
         &-sidenav {
-            background-color: whitesmoke;
+            background-color: #fbae3c;
+            ;
             box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .2);
             position: fixed;
-            height: 10%;
+            height: 6rem;
             width: 100%;
             display: grid;
             align-items: center;
             z-index: 22;
+            font-family: "Nunito", sans-serif;
+            font-weight: 700;
 
-
-
-
-
-
-
+        
+       
             .list-container {
 
                 padding: 1rem;
@@ -57,7 +66,7 @@
 
 
                     li {
-
+                        color: white;
                         font-size: calc(1rem + 0.5vh);
                         cursor: pointer;
                         position: relative;
@@ -74,29 +83,19 @@
         }
     }
 
-    @media screen and (max-width: 500px) {
-        .toolbar {
-            grid-template-columns: container-start/conteinar-end;
-            height: 13rem;
 
 
-
-        }
-
-
-
-    }
 
     @media screen and (max-width: 500px) {
         .toolbar {
             grid-template-columns: container-start/conteinar-end;
-            height: 13rem;
+            height: 58px;
 
         }
-
-        ul {
+        .list-container{
             visibility: hidden;
         }
+    
 
 
         .side-bar_content {
@@ -106,20 +105,20 @@
 
         }
 
-        .select {
-            justify-self: center;
-        }
+     
+
     }
+
 
     @media screen and (min-width: 500px) {
 
+     .select-box{
+     display:none;
+     }
 
 
 
-
-        .select {
-            display: none;
-        }
+      
     }
 
 }
@@ -134,6 +133,5 @@
 .active {
     border-bottom: 0.1rem solid;
 
-    border-image: linear-gradient(to right, #ffd6c7, #bcdae2)1;
-    padding: 1rem;
+
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/auth.service';
+import { BasketItem } from 'src/app/services/auth/basket';
 import { BasketService } from 'src/app/services/basket/basket.service';
 import { ProductResponse } from 'src/app/services/products/ProductResponse';
 
@@ -10,12 +11,13 @@ import { ProductResponse } from 'src/app/services/products/ProductResponse';
   styleUrls: ['./basket.component.scss']
 })
 export class BasketComponent implements OnInit {
-  basket
-  basketPrice
+  basket: Array<BasketItem>;
+  basketPrice: number;
 
   displayedColumns: string[] = [
     'price',
     'name',
+    'count',
     'thumbnail',
     "actions"
   ];
@@ -47,4 +49,11 @@ export class BasketComponent implements OnInit {
     return this.router.navigateByUrl('purchase')
   }
 
+  removeCount(item: BasketItem): void {
+    this.basketService.removeCount(item.product.id);
+  }
+
+  addCount(item: BasketItem): void {
+    this.basketService.addCount(item.product.id);
+  }
 }

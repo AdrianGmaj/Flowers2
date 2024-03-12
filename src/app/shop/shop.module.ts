@@ -7,6 +7,7 @@ import { AllCategoriesComponent } from './shop/all-categories/all-categories.com
 import { SelectedCategoryComponent } from './shop/selected-category/selected-category.component';
 import { MatSelectModule } from '@angular/material/select';
 import { CardComponent } from './shop/card/card.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CardComponent } from './shop/card/card.component';
   imports: [
     CommonModule,
     ShopRoutingModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
   ]
 })
 export class ShopModule { }

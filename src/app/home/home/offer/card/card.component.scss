@@ -4,15 +4,17 @@
 
     &_content {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(68000rem, 1fr));
         gap: 3vh;
         place-items: center;
 
 
         &-card {
-            width: 40rem;
-            height: 40rem;
+            width: 35rem;
+            height: 35rem;
             position: relative;
+            flex: 1 0 21%;
+     
 
         }
 
@@ -89,20 +91,19 @@
 
     }
 
-    @media screen and (max-width: 500px) {
-        padding: 2vh 2vw;
+   
+}
+@media screen and (max-width: 500px) {
 
-        .offer_content {
-            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        }
+    .offer_content {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
 
-        .offer_content-card {
-            width: 25rem;
-            height: 25rem;
-        }
+    .offer_content-card {
+        width: 30rem;
+        height: 35rem;
     }
 }
-
 .offer_content-card-back {
     transform: perspective(100rem) rotateY(0.5turn);
 }

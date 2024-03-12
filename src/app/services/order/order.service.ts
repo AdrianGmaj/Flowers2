@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { ProductResponse } from '../products/ProductResponse';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../auth/auth.service';
+import { BasketItem } from '../auth/basket';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +29,7 @@ export class OrderService {
 }
 
  export interface Order {
-  products: Array<ProductResponse>;
+  products: Array<BasketItem>;
   price: number;
 }
 
