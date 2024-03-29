@@ -67,7 +67,16 @@ export class PurchaseComponent implements OnInit {
     this.order = {
       order: {
         price: this.basket.price,
-        products: this.basket.products
+        products: this.basket.products.map((item)=>{
+          const productDetails =  {
+            id: item.product.id,
+            name: item.product.name,
+            price: item.product.price,
+            thumbnail: item.product.thumbnail,
+            quantity: item.count,
+          }
+          return productDetails
+        })
       },
       data: {
         name: data.name,

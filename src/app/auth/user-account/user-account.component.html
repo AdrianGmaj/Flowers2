@@ -45,6 +45,7 @@
               [attr.id]="'accordion-body-' + index"
               [attr.aria-labelledby]="'accordion-header-' + index">
               <span><b>{{product.name }}</b></span>
+              <span><b>x{{product.quantity }}</b></span>
               <span>{{product.price | currency }}</span>
               <img src='{{product.thumbnail}}' alt="">
              

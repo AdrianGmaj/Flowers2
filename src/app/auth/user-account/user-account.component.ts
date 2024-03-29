@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/auth.service';
-import { OrderService } from 'src/app/services/order/order.service';
+import { OrderService, UserOrdersResponse } from 'src/app/services/order/order.service';
 
 @Component({
   selector: 'app-user-account',
@@ -9,7 +9,7 @@ import { OrderService } from 'src/app/services/order/order.service';
   styleUrls: ['./user-account.component.scss']
 })
 export class UserAccountComponent implements OnInit {
-  orders
+  orders:Array<UserOrdersResponse>
   constructor(private authService: AuthService,
     private router: Router,
     private orderService: OrderService) { }
