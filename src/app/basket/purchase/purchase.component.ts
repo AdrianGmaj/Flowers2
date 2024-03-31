@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Basket } from 'src/app/services/auth/basket';
 import { BasketService } from 'src/app/services/basket/basket.service';
 import { OrderCreateRequest, OrderService } from 'src/app/services/order/order.service';
@@ -51,7 +52,8 @@ export class PurchaseComponent implements OnInit {
   })
 
   constructor(private orderService: OrderService,
-    private basketService: BasketService) { }
+    private basketService: BasketService,
+    private router: Router) { }
 
   ngOnInit() {
     this.basketService.getBasket().subscribe(bs => this.basket = bs)
@@ -99,8 +101,8 @@ export class PurchaseComponent implements OnInit {
       }
     })
 
-
-
+alert('thanks for shoping')
+this.router.navigateByUrl('/home')
 
   }
 }
